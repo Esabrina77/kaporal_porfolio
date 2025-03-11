@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(240, 1%, 25%) 3%, 
+    hsl(0, 0%, 19%) 97%
+  );
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-alpha-25: hsla(0, 0%, 100%, 0.25);
+  --white-alpha-40: hsla(0, 0%, 100%, 0.4);
+  
+  /* Typography */
+  --ff-poppins: var(--font-poppins);
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-[var(--smoky-black)] text-white font-[var(--ff-poppins)];
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--orange-yellow-crayola)] to-white;
+  }
+}

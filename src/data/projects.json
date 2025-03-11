@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "title": "Mercedes AR APP",
+      "period": "janvier 2025",
+      "technologies": ["Next.js", "Three.js", "TypeScript", "WebXR", "SKETCHFAB"],
+      "description": "Application AR de visualisation d'une voiture Mercedes",
+      "points": [
+        "Détection des surfaces réelles pour un placement précis du modèle 3D",
+        "Contrôle interactif en temps réel (rotation des roues, déplacement du véhicule)",
+        "Visualisation immersive de l'intérieur pour enrichir l'expérience utilisateur"
+      ],
+      "image": "/images/mercedes-ar.jpg",
+      "github": "https://github.com/Esabrina77/mercedes-ar",
+      "link": "https://mercedes-ar.demo.com"
+    },
+    {
+      "title": "Prédiction de la Consommation Énergétique",
+      "period": "Depuis nov. 2024",
+      "technologies": ["Jupyter Notebook", "Python", "Pandas", "Scikit-learn", "Keras", "Tensorflow"],
+      "description": "Modèle prédictif de consommation énergétique",
+      "points": [
+        "Collecte, nettoyage et analyse de données météorologiques et démographiques",
+        "Modélisation statistique et prétraitement des données",
+        "Obtention d'un modèle prédictif avec une précision de 98%"
+      ],
+      "image": "/images/energy-prediction.jpg",
+      "github": "https://github.com/Esabrina77/energy-prediction"
+    }
+  ]
+} 

@@ -1,0 +1,26 @@
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-16 sm:py-24;
+}
+
+.heading {
+  @apply text-2xl sm:text-3xl md:text-4xl font-bold mb-8;
+  color: var(--orange-yellow-crayola);
+}
+
+.button {
+  @apply px-6 py-2 rounded-full transition-all duration-300;
+}
+
+.buttonPrimary {
+  composes: button;
+  background-color: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+}
+
+.buttonPrimary:hover {
+  opacity: 0.9;
+} 

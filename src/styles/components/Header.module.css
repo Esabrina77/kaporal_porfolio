@@ -1,0 +1,26 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  background-color: var(--smoky-black);
+  background-opacity: 0.9;
+}
+
+.nav {
+  @apply container mx-auto px-4 py-4;
+}
+
+.navList {
+  @apply flex items-center justify-end gap-8;
+}
+
+.navLink {
+  position: relative;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--orange-yellow-crayola);
+} 

@@ -1,0 +1,118 @@
+.sidebar {
+  @apply bg-[var(--bg-gradient-onyx)] 
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px] 
+         p-4 sm:p-6
+         max-h-[112px] overflow-hidden transition-[max-height] duration-300;
+  backdrop-filter: blur(10px);
+  transform-origin: top;
+  transition: max-height 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar.active {
+  @apply max-h-[405px];
+  transform: translateY(0);
+}
+
+.sidebarInfo {
+  @apply flex flex-wrap items-center gap-4;
+}
+
+.avatarBox {
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         overflow-hidden;
+}
+
+.avatarBox img {
+  @apply w-full h-full object-cover;
+}
+
+.infoContent {
+  @apply flex-1;
+}
+
+.name {
+  @apply text-2xl font-medium mb-2;
+  color: var(--orange-yellow-crayola);
+}
+
+.title {
+  @apply inline-block
+         bg-[var(--onyx)]
+         text-sm
+         font-medium
+         py-1 px-3
+         rounded-full;
+}
+
+.infoMoreBtn {
+  @apply relative
+         bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         p-2
+         rounded-lg
+         transition-[0.3s];
+}
+
+.infoMoreBtn span {
+  @apply hidden sm:block
+         text-sm
+         font-medium
+         py-1 px-3;
+}
+
+.infoMoreBtn ion-icon {
+  @apply text-xl sm:hidden;
+  transition: transform 0.3s ease;
+}
+
+.separatorLine {
+  @apply w-full h-[1px] my-4
+         bg-[var(--white-alpha-25)];
+}
+
+.contactsList {
+  @apply space-y-4;
+}
+
+.contactItem {
+  @apply flex items-center gap-4;
+}
+
+.iconBox {
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         w-10 h-10
+         rounded-lg
+         flex items-center justify-center
+         text-xl;
+}
+
+.contactInfo {
+  @apply flex-1 min-w-0;
+}
+
+.contactTitle {
+  @apply text-sm mb-1;
+  color: var(--white-alpha-40);
+}
+
+.contactLink {
+  @apply text-sm
+         overflow-hidden text-ellipsis whitespace-nowrap
+         transition-colors duration-300
+         hover:text-[var(--orange-yellow-crayola)];
+}
+
+.sidebarInfoMore {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar.active .sidebarInfoMore {
+  opacity: 1;
+  visibility: visible;
+} 

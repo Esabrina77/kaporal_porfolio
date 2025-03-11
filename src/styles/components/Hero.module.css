@@ -1,0 +1,59 @@
+.hero {
+    @apply min-h-screen py-16 sm:py-24;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+           grid gap-8 sm:gap-12;
+  }
+  
+  .content {
+    @apply bg-[var(--bg-gradient-onyx)]
+           border border-solid border-[var(--white-alpha-25)]
+           rounded-[20px]
+           p-6 sm:p-8;
+    backdrop-filter: blur(10px);
+  }
+  
+  .heading {
+    @apply text-4xl sm:text-5xl lg:text-6xl
+           font-bold
+           mb-6;
+    background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .description {
+    @apply text-lg sm:text-xl
+           leading-relaxed
+           mb-8
+           text-[var(--white-alpha-40)];
+  }
+  
+  .cta {
+    @apply flex flex-wrap gap-4;
+  }
+  
+  .ctaButton {
+    @apply inline-block
+           bg-[var(--orange-yellow-crayola)]
+           text-[var(--smoky-black)]
+           font-medium
+           py-3 px-6
+           rounded-full
+           transition-opacity duration-300
+           hover:opacity-90;
+  }
+  
+  .ctaButtonOutline {
+    @apply inline-block
+           border border-solid border-[var(--orange-yellow-crayola)]
+           text-[var(--orange-yellow-crayola)]
+           font-medium
+           py-3 px-6
+           rounded-full
+           transition-colors duration-300
+           hover:bg-[var(--orange-yellow-crayola)]
+           hover:text-[var(--smoky-black)];
+  }
