@@ -1,0 +1,105 @@
+{
+  "personal": {
+    "name": "Sabrina Eloundou",
+    "title": "Développeuse",
+    "email": "sabrinaeloundou33@gmail.com",
+    "github": "https://github.com/Esabrina77",
+    "linkedin": "https://www.linkedin.com/in/sabrina-eloundou-706372295/"
+  },
+  "experience": [
+    {
+      "title": "Développeuse (Stage)",
+      "company": "LINK2BRAIN",
+      "location": "Marseille",
+      "period": "Janvier 2025 - Présent",
+      "technologies": ["Vue.js", "Figma", "TypeScript", "SCSS", "REST API", "POSTMAN", "MySqL", "AGILE"],
+      "achievements": [
+        "Conception et développement d'une plateforme de gestion de médias sociaux",
+        "Création d'une interface responsive et fluide avec navigation optimisée",
+        "Développement d'un module d'analyse de performance avec visualisation interactive des données"
+      ]
+    },
+    {
+      "title": "Développeuse",
+      "company": "IATRAX",
+      "location": "Marseille",
+      "period": "2024 (3 Mois)",
+      "technologies": ["Vue.js", "TypeScript", "SCSS", "Render", "Figma", "SEO", "AGILE"],
+      "achievements": [
+        "Conception d'une interface web interactive et responsive à partir de maquettes",
+        "Optimisation des performances (lazy loading, code splitting) et mise en place des bonnes pratiques SEO",
+        "Structuration modulaire des styles pour faciliter la maintenance"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor Informatique",
+      "school": "AIX YNOV CAMPUS",
+      "period": "Depuis oct. 2023",
+      "description": "Actuellement en 2ème année",
+      "projects": [
+        "Conception UX/UI mobile : Création de personas, wireframes et prototypes interactifs",
+        "Portfolio PHP : Gestion utilisateurs, projets et compétences, avec rôles et sécurité",
+        "Serveur Wiki.js : Installation et configuration d'une plateforme de documentation collaborative"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "ASSURANCE QUALITE WEB",
+      "issuer": "OPQUAST",
+      "date": "déc. 2024",
+      "details": "Certification Opquast – Maîtrise des bonnes pratiques et de l'assurance qualité web",
+      "code": "HKW58Q"
+    },
+    {
+      "title": "Three.js Journey",
+      "issuer": "Bruno Simon",
+      "date": "Depuis déc. 2024",
+      "details": "Formation approfondie en Three.js et WebGL"
+    }
+  ],
+  "skills": {
+    "technical": [
+      {
+        "category": "Langages",
+        "items": ["JavaScript", "TypeScript", "Python", "HTML", "CSS/SCSS", "PHP", "C++"]
+      },
+      {
+        "category": "Frameworks",
+        "items": ["Vue.js", "Next.js", "Node.js"]
+      },
+      {
+        "category": "Base de données",
+        "items": ["PostgreSQL", "MySQL"]
+      },
+      {
+        "category": "Outils",
+        "items": ["Visual Studio", "VSCode", "Unity", "Git", "GitHub", "Figma", "Postman"]
+      }
+    ],
+    "soft": [
+      "Communication efficace",
+      "Gestion du temps",
+      "Curiosité",
+      "Adaptabilité"
+    ]
+  },
+  "languages": [
+    {
+      "name": "Français",
+      "level": "Natif"
+    },
+    {
+      "name": "Anglais",
+      "level": "Intermédiaire"
+    }
+  ],
+  "interests": [
+    "Piano",
+    "Lecture",
+    "Mots fléchés",
+    "Jeux vidéos (jeux narratifs, énigmes)"
+  ]
+} 

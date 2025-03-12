@@ -1,0 +1,83 @@
+.projectsPage {
+  @apply py-16 sm:py-24;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.pageTitle {
+  @apply text-4xl sm:text-5xl font-bold mb-12 text-center;
+  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.projectsGrid {
+  @apply grid gap-8 sm:grid-cols-2;
+}
+
+.projectCard {
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         p-6 sm:p-8
+         transition-transform duration-300
+         hover:transform hover:scale-[1.02];
+  backdrop-filter: blur(10px);
+}
+
+.projectImage {
+  @apply relative w-full h-48 mb-6 rounded-lg overflow-hidden;
+}
+
+.projectImage img {
+  @apply w-full h-full object-cover;
+}
+
+.projectTitle {
+  @apply text-2xl font-bold mb-2;
+  color: var(--orange-yellow-crayola);
+}
+
+.projectPeriod {
+  @apply text-sm mb-4;
+  color: var(--white-alpha-40);
+}
+
+.technologies {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.tech {
+  @apply text-xs px-3 py-1 rounded-full;
+  background: var(--white-alpha-25);
+}
+
+.projectDescription {
+  @apply mb-4;
+  color: var(--white-alpha-40);
+}
+
+.projectPoints {
+  @apply space-y-2 mb-6 list-disc list-inside;
+  color: var(--white-alpha-40);
+}
+
+.projectLinks {
+  @apply flex gap-4;
+}
+
+.projectLink {
+  @apply inline-flex items-center gap-2
+         px-4 py-2 rounded-full
+         text-sm font-medium
+         transition-colors duration-300;
+  background: var(--white-alpha-25);
+  color: var(--orange-yellow-crayola);
+}
+
+.projectLink:hover {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+} 

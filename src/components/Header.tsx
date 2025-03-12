@@ -1,28 +1,18 @@
 'use client';
 import Link from 'next/link';
-import { useActiveSection } from '@/hooks/useActiveSection';
+import { usePathname } from 'next/navigation';
 import styles from '@/styles/components/Header.module.css';
 
 export default function Header() {
-  const activeSection = useActiveSection();
+  const pathname = usePathname();
 
   const navItems = [
-    { href: '#home', label: 'Accueil' },
-    { href: '#projects', label: 'Projets' },
-    { href: '#experience', label: 'Expérience' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/', label: 'Accueil' },
+    { href: '/projects', label: 'Projets' },
+    { href: '/experience', label: 'Expérience' },
+    { href: '/about', label: 'À propos' },
+    { href: '/contact', label: 'Contact' },
   ];
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    if (href) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   return (
     <header className={styles.header}>
@@ -33,9 +23,8 @@ export default function Header() {
               <Link
                 href={href}
                 className={`${styles.navLink} ${
-                  activeSection === href.slice(1) ? styles.active : ''
+                  pathname === href ? styles.active : ''
                 }`}
-                onClick={handleNavClick}
               >
                 {label}
               </Link>
