@@ -1,26 +1,135 @@
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 50;
-  background-color: var(--smoky-black);
-  background-opacity: 0.9;
+  @apply fixed top-0 left-0 w-full z-50
+         bg-[var(--bg-gradient-onyx)]
+         border-b border-solid border-[var(--white-alpha-25)]
+         backdrop-blur-[10px];
+  height: 120px;
+}
+
+.headerContent {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+         flex items-center justify-between;
+  height: 120px;
+}
+
+.logoContainer {
+  @apply relative flex items-center
+         transition-opacity duration-300
+         hover:opacity-80;
+  height: 100px;
+  margin-top: -10px;
+}
+
+.logo {
+  @apply w-auto h-full
+         object-contain;
+  transform: scale(1.2);
 }
 
 .nav {
-  @apply container mx-auto px-4 py-4;
+  @apply flex items-center;
 }
 
 .navList {
-  @apply flex items-center justify-end gap-8;
+  @apply flex space-x-6;
 }
 
 .navLink {
-  position: relative;
-  color: inherit;
-  transition: color 0.3s ease;
+  @apply px-6 py-3 rounded-full
+         text-lg font-medium
+         transition-colors duration-300
+         hover:text-[var(--orange-yellow-crayola)]
+         relative;
 }
 
-.navLink:hover {
-  color: var(--orange-yellow-crayola);
+.navLink::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 
+         w-0 h-0.5
+         bg-[var(--orange-yellow-crayola)]
+         transition-all duration-300 ease-in-out
+         transform -translate-x-1/2;
+}
+
+.navLink:hover::after {
+  @apply w-1/2;
+}
+
+.active {
+  @apply text-[var(--orange-yellow-crayola)];
+}
+
+.active::after {
+  @apply w-3/4;
+}
+
+.headerRight {
+  @apply flex items-center gap-6;
+}
+
+.themeToggle {
+  @apply p-2 rounded-full
+         transition-transform duration-300
+         hover:scale-110
+         focus:outline-none
+         focus:ring-2 focus:ring-[var(--orange-yellow-crayola)];
+}
+
+.themeIcon {
+  @apply w-10 h-10
+         transition-transform duration-300
+         hover:rotate-12;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .header {
+    height: 100px;
+  }
+
+  .headerContent {
+    height: 100px;
+  }
+
+  .logoContainer {
+    height: 80px;
+  }
+
+  .navList {
+    @apply space-x-4;
+  }
+
+  .navLink {
+    @apply px-4 py-2 text-base;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 80px;
+  }
+
+  .headerContent {
+    height: 80px;
+  }
+
+  .logoContainer {
+    height: 60px;
+  }
+
+  .navList {
+    @apply space-x-2;
+  }
+
+  .navLink {
+    @apply px-2 py-1 text-sm;
+  }
+
+  .headerRight {
+    @apply gap-3;
+  }
+
+  .themeIcon {
+    @apply w-8 h-8;
+  }
 } 

@@ -1,9 +1,22 @@
 .recentSection {
-  @apply py-16;
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         p-6 sm:p-8
+         w-full;
+}
+
+.mainSection {
+  @apply pt-20 pb-16 sm:pb-24;
 }
 
 .container {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.content {
+  @apply ml-[450px]
+         space-y-16;
 }
 
 .sectionHeader {
@@ -24,4 +37,25 @@
          transition-colors duration-300
          hover:bg-[var(--orange-yellow-crayola)]
          hover:text-[var(--smoky-black)];
+}
+
+@media (max-width: 1280px) {
+  .container {
+    @apply px-4;
+  }
+  
+  .content {
+    @apply ml-[420px];
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    @apply ml-0;
+  }
+}
+
+/* Ajout d'une classe commune pour toutes les pages */
+.pageContainer {
+  @apply pt-32 pb-16 sm:pb-24;
 } 

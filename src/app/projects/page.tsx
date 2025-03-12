@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import projectsData from '@/data/projects.json';
-import styles from './projects.module.css';
+import styles from '@/styles/app/project/projects.module.css';
 
 export const metadata: Metadata = {
   title: 'Projets | Sabrina Eloundou',
@@ -12,7 +12,7 @@ export default function ProjectsPage() {
   const { projects } = projectsData;
 
   return (
-    <div className={styles.projectsPage}>
+    <div className={`${styles.projectsPage} ${styles.pageContainer}`}>
       <div className={styles.container}>
         <h1 className={styles.pageTitle}>Mes Projets</h1>
         

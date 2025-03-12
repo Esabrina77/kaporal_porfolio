@@ -18,6 +18,28 @@
   --ff-poppins: var(--font-poppins);
 }
 
+[data-theme='light'] {
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 95%) 3%, 
+    hsl(0, 0%, 90%) 97%
+  );
+  --smoky-black: hsla(158, 69%, 35%, 0.627);
+  --white-alpha-25: hsla(0, 0%, 0%, 0.25);
+  --white-alpha-40: hsla(0, 0%, 0%, 0.4);
+}
+
+[data-theme='dark'] {
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(240, 1%, 25%) 3%, 
+    hsl(0, 0%, 19%) 97%
+  );
+  --smoky-black: hsla(0, 0%, 0%, 0.862);
+  --white-alpha-25: hsla(0, 0%, 100%, 0.25);
+  --white-alpha-40: hsla(0, 0%, 100%, 0.4);
+}
+
 /* Base styles */
 @layer base {
   body {
@@ -29,5 +51,18 @@
 @layer utilities {
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--orange-yellow-crayola)] to-white;
+  }
+}
+
+/* Ajout d'un style global pour le main */
+main {
+  @apply min-h-screen;
+  padding-top: 50px; /* Hauteur du header */
+}
+
+/* Ajustement responsive */
+@media (max-width: 768px) {
+  main {
+    padding-top: 80px; /* Hauteur du header sur mobile */
   }
 }

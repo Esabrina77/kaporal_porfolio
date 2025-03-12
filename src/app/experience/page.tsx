@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import profileData from '@/data/profile.json';
-import styles from './experience.module.css';
+import styles from '@/styles/app/experience/experience.module.css';
 
 export const metadata: Metadata = {
   title: 'Expérience | Sabrina Eloundou',
@@ -11,7 +11,7 @@ export default function ExperiencePage() {
   const { experience } = profileData;
 
   return (
-    <div className={styles.experiencePage}>
+    <div className={`${styles.experiencePage} ${styles.pageContainer}`}>
       <div className={styles.container}>
         <h1 className={styles.pageTitle}>Mon Expérience</h1>
         

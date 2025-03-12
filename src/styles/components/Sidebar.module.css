@@ -1,27 +1,24 @@
 .sidebar {
-  @apply bg-[var(--bg-gradient-onyx)] 
-         border border-solid border-[var(--white-alpha-25)]
-         rounded-[20px] 
-         p-4 sm:p-6
-         max-h-[112px] overflow-hidden transition-[max-height] duration-300;
-  backdrop-filter: blur(10px);
-  transform-origin: top;
-  transition: max-height 0.3s ease, transform 0.3s ease;
-}
-
-.sidebar.active {
-  @apply max-h-[405px];
-  transform: translateY(0);
-}
-
-.sidebarInfo {
-  @apply flex flex-wrap items-center gap-4;
-}
-
-.avatarBox {
   @apply bg-[var(--bg-gradient-onyx)]
          border border-solid border-[var(--white-alpha-25)]
          rounded-[20px]
+         p-6 sm:p-8
+         fixed
+         top-32
+         left-[max(1rem,calc((100vw-80rem)/2+1rem))]
+         w-[400px];
+  backdrop-filter: blur(10px);
+}
+
+.sidebarInfo {
+  @apply flex flex-col items-center gap-8;
+}
+
+.avatarBox {
+  @apply relative
+         w-[300px] h-[300px]
+         rounded-full
+         border-4 border-solid border-[var(--orange-yellow-crayola)]
          overflow-hidden;
 }
 
@@ -30,21 +27,19 @@
 }
 
 .infoContent {
-  @apply flex-1;
+  @apply text-center w-full;
 }
 
 .name {
-  @apply text-2xl font-medium mb-2;
-  color: var(--orange-yellow-crayola);
+  @apply text-4xl font-bold mb-4;
+  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .title {
-  @apply inline-block
-         bg-[var(--onyx)]
-         text-sm
-         font-medium
-         py-1 px-3
-         rounded-full;
+  @apply text-2xl;
+  color: var(--white-alpha-40);
 }
 
 .infoMoreBtn {
@@ -115,4 +110,25 @@
 .sidebar.active .sidebarInfoMore {
   opacity: 1;
   visibility: visible;
-} 
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .sidebar {
+    @apply static
+           w-full
+           left-0;
+  }
+  
+  .avatarBox {
+    @apply w-[200px] h-[200px];
+  }
+
+  .name {
+    @apply text-3xl mb-2;
+  }
+
+  .title {
+    @apply text-xl;
+  }
+}

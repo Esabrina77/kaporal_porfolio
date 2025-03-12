@@ -98,8 +98,8 @@ export default function RootLayout({
     <html lang="fr">
       <body className={poppins.variable}>
         <Header />
-        <main className="pt-16">
-        {children}
+        <main>
+          {children}
         </main>
       </body>
     </html>

@@ -1,18 +1,14 @@
 .hero {
-    @apply min-h-screen py-16 sm:py-24;
-  }
-  
-  .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
-           grid gap-8 sm:gap-12;
-  }
-  
-  .content {
     @apply bg-[var(--bg-gradient-onyx)]
            border border-solid border-[var(--white-alpha-25)]
            rounded-[20px]
            p-6 sm:p-8;
     backdrop-filter: blur(10px);
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+           grid gap-8 sm:gap-12;
   }
   
   .heading {
