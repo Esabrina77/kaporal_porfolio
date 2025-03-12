@@ -10,7 +10,7 @@
     hsl(0, 0%, 19%) 97%
   );
   --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --smoky-black: hsl(0, 0%, 7%);
+  --smoky-black: hsla(0, 0%, 0%, 0.862);
   --white-alpha-25: hsla(0, 0%, 100%, 0.25);
   --white-alpha-40: hsla(0, 0%, 100%, 0.4);
   

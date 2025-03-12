@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from '@/styles/components/Projects.module.css';
 import projectsData from '@/data/projects.json';
 
@@ -7,14 +8,20 @@ export default function RecentProjects() {
 
   return (
     <div className={styles.projectsGrid}>
-      {recentProjects.map((project, index) => (
+      {recentProjects.map((project) => (
         <article 
           key={project.title}
           className={styles.projectCard}
         >
           {project.image && (
             <div className={styles.projectImage}>
-              <img src={project.image} alt={project.title} />
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={500}
+                height={300}
+                objectFit="cover"
+              />
             </div>
           )}
           

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import projectsData from '@/data/projects.json';
 import styles from './projects.module.css';
 
@@ -20,7 +21,13 @@ export default function ProjectsPage() {
             <article key={project.title} className={styles.projectCard}>
               {project.image && (
                 <div className={styles.projectImage}>
-                  <img src={project.image} alt={project.title} />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={500}
+                    height={300}
+                    objectFit="cover"
+                  />
                 </div>
               )}
               

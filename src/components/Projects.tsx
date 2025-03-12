@@ -5,6 +5,7 @@ import styles from '@/styles/components/Projects.module.css';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { Project } from '@/types/project';
 import projectsData from '@/data/projects.json';
+import Image from 'next/image';
 
 export default function Projects() {
   const [activeProject, setActiveProject] = useState(0);
@@ -24,7 +25,13 @@ export default function Projects() {
             >
               {project.image && (
                 <div className={styles.projectImage}>
-                  <img src={project.image} alt={project.title} />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={500}
+                    height={300}
+                    objectFit="cover"
+                  />
                 </div>
               )}
               

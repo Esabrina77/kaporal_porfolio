@@ -27,10 +27,10 @@ export async function POST(request: Request) {
     console.log('Sending email with data:', { name, email, subject });
 
     const data = await resend.emails.send({
-      from: 'Sabrina Portfolio <onboarding@resend.dev>',
+      from: 'Contact Form <contact@kaporelo.com>',
       to: ['sabrinaeloundou33@gmail.com'],
       subject: `Nouveau message de ${name}: ${subject}`,
-      reply_to: email,
+      replyTo: email,
       text: `
         Nom: ${name}
         Email: ${email}
