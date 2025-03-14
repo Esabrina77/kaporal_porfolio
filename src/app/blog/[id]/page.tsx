@@ -2,23 +2,31 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import blogData from '@/data/blog.json';
+import type { BlogData, BlogPost } from '@/types/blog';
 import styles from '@/styles/app/blog/article.module.css';
 import type { Metadata } from 'next';
 
-// Définition des métadonnées de la page
-export const metadata: Metadata = {
-  title: 'Article | Blog',
-  description: 'Article de blog détaillé'
+type Props = {
+  params: Promise<{ id: string }>
 };
 
-// Composant de la page article
-export default function ArticlePage() {
-  // Récupérer l'ID depuis l'URL
-  const pathname = window.location.pathname;
-  const postId = Number(pathname.split('/').pop());
-  const post = blogData.posts[postId];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const { posts } = blogData as BlogData;
+  const post = posts[Number(id)] as BlogPost;
+  
+  return {
+    title: post.title,
+    description: post.content.substring(0, 160),
+  };
+}
 
-  if (!post || isNaN(postId)) {
+export default async function ArticlePage({ params }: Props) {
+  const { id } = await params;
+  const { posts } = blogData as BlogData;
+  const post = posts[Number(id)] as BlogPost;
+
+  if (!post) {
     notFound();
   }
 
@@ -61,4 +69,11 @@ export default function ArticlePage() {
       </div>
     </article>
   );
+}
+
+export function generateStaticParams() {
+  const { posts } = blogData as BlogData;
+  return posts.map((_, index) => ({
+    id: index.toString()
+  }));
 }
