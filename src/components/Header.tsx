@@ -2,32 +2,46 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import styles from '@/styles/components/Header.module.css';
 
 export default function Header() {
   const pathname = usePathname();
-  const [isDark, setIsDark] = useState(() => {
-    // Initialisation du state avec une fonction
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        return savedTheme === 'dark';
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-    return true;
-  });
+  const isMounted = useRef(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-  // Effet pour synchroniser le thème avec le DOM
   useEffect(() => {
+    isMounted.current = true;
+    
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDark(savedTheme === 'dark');
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setIsDark(prefersDark);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted.current) return;
+    
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  }, [isDark]); // Dépendance stable
+  }, [isDark]);
 
-  // Gestion du changement de thème
   const toggleTheme = () => {
     setIsDark(prev => !prev);
+  };
+
+  // Gestion de l'ouverture/fermeture du menu burger
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev);
+  };
+
+  // Fermer le menu quand on clique sur un lien
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   const navItems = [
@@ -53,7 +67,16 @@ export default function Header() {
         </Link>
 
         <div className={styles.headerRight}>
-        
+          {/* Bouton burger pour mobile */}
+          <button 
+            onClick={toggleMenu} 
+            className={styles.burgerButton}
+            aria-label="Toggle menu"
+          >
+            <div className={`${styles.burgerBar} ${isMenuOpen ? styles.open : ''}`}></div>
+            <div className={`${styles.burgerBar} ${isMenuOpen ? styles.open : ''}`}></div>
+            <div className={`${styles.burgerBar} ${isMenuOpen ? styles.open : ''}`}></div>
+          </button>
 
           <nav className={styles.nav}>
             <ul className={styles.navList}>
@@ -85,6 +108,27 @@ export default function Header() {
             />
           </button>
         </div>
+      </div>
+      
+      {/* Menu mobile qui s'affiche quand on clique sur le burger */}
+      <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
+        <nav className={styles.mobileNav}>
+          <ul className={styles.mobileNavList}>
+            {navItems.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`${styles.mobileNavLink} ${
+                    pathname === href ? styles.active : ''
+                  }`}
+                  onClick={closeMenu}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   );

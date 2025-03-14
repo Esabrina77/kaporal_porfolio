@@ -81,6 +81,79 @@
          hover:rotate-12;
 }
 
+/* Styles pour le menu burger */
+.burgerButton {
+  @apply flex flex-col justify-between
+         w-8 h-6
+         bg-transparent border-none
+         cursor-pointer p-0 z-10
+         mr-4;
+}
+
+.burgerBar {
+  @apply w-full h-[3px]
+         rounded-sm
+         transition-all duration-300;
+  background-color: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation des barres du burger quand le menu est ouvert */
+.burgerBar.open:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burgerBar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerBar.open:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menu mobile */
+.mobileMenu {
+  @apply fixed top-[120px] left-0
+         w-full h-0
+         overflow-hidden
+         transition-all duration-300;
+  background-color: var(--smoky-black);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 99;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mobileMenu.open {
+  @apply h-auto;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.mobileNav {
+  @apply p-6;
+  max-width: 100%;
+}
+
+.mobileNavList {
+  @apply flex flex-col space-y-6;
+}
+
+.mobileNavLink {
+  @apply block py-4 px-6
+         text-2xl font-medium
+         transition-colors duration-300
+         hover:text-[var(--orange-yellow-crayola)]
+         border-l-4 border-transparent;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.mobileNavLink.active {
+  @apply text-[var(--orange-yellow-crayola)]
+         border-l-4 border-[var(--orange-yellow-crayola)];
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
   .header {
@@ -95,12 +168,12 @@
     height: 80px;
   }
 
-  .navList {
-    @apply space-x-4;
+  .mobileMenu {
+    top: 100px;
   }
 
-  .navLink {
-    @apply px-4 py-2 text-base;
+  .mobileMenu.open {
+    height: calc(100vh - 100px);
   }
 }
 
@@ -117,19 +190,49 @@
     height: 60px;
   }
 
-  .navList {
-    @apply space-x-2;
-  }
-
-  .navLink {
-    @apply px-2 py-1 text-sm;
-  }
-
   .headerRight {
     @apply gap-3;
   }
 
   .themeIcon {
     @apply w-8 h-8;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mobileMenu {
+    top: 80px;
+  }
+
+  .mobileMenu.open {
+    height: calc(100vh - 80px);
+  }
+  
+  .mobileNavLink {
+    @apply py-3 px-4 text-xl;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 70px;
+  }
+  
+  .headerContent {
+    height: 70px;
+  }
+  
+  .logoContainer {
+    height: 50px;
+  }
+  
+  .mobileMenu {
+    top: 70px;
+  }
+  
+  .mobileMenu.open {
+    height: calc(100vh - 70px);
   }
 } 
