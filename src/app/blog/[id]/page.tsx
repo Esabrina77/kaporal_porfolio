@@ -3,23 +3,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import blogData from '@/data/blog.json';
 import styles from '@/styles/app/blog/article.module.css';
+import type { Metadata } from 'next';
 
-export async function generateStaticParams() {
-  return blogData.posts.map((_, index) => ({
-    id: index.toString()
-  }));
-}
+// Définition des métadonnées de la page
+export const metadata: Metadata = {
+  title: 'Article | Blog',
+  description: 'Article de blog détaillé'
+};
 
-export default async function ArticlePage({
-  params,
-}: {
-  params: { id: string }
-}) {
-  // Conversion sécurisée de l'ID
-  const postId = Number(params.id);
+// Composant de la page article
+export default function ArticlePage() {
+  // Récupérer l'ID depuis l'URL
+  const pathname = window.location.pathname;
+  const postId = Number(pathname.split('/').pop());
   const post = blogData.posts[postId];
 
-  // Redirection si l'article n'existe pas
   if (!post || isNaN(postId)) {
     notFound();
   }
@@ -63,4 +61,4 @@ export default async function ArticlePage({
       </div>
     </article>
   );
-} 
+}
