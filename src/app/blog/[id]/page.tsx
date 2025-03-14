@@ -4,10 +4,23 @@ import Link from 'next/link';
 import blogData from '@/data/blog.json';
 import styles from '@/styles/app/blog/article.module.css';
 
-export default function ArticlePage({ params }: { params: { id: string } }) {
-  const post = blogData.posts[parseInt(params.id)];
+export async function generateStaticParams() {
+  return blogData.posts.map((_, index) => ({
+    id: index.toString()
+  }));
+}
 
-  if (!post) {
+export default async function ArticlePage({
+  params,
+}: {
+  params: { id: string }
+}) {
+  // Conversion sécurisée de l'ID
+  const postId = Number(params.id);
+  const post = blogData.posts[postId];
+
+  // Redirection si l'article n'existe pas
+  if (!post || isNaN(postId)) {
     notFound();
   }
 
@@ -29,8 +42,9 @@ export default function ArticlePage({ params }: { params: { id: string } }) {
           <Image
             src={post.image}
             alt={post.title}
-            width={1200}
-            height={600}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className={styles.blogImage}
             priority
           />
         </div>
