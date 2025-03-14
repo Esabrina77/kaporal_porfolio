@@ -10,7 +10,7 @@
         "Contrôle interactif en temps réel (rotation des roues, déplacement du véhicule)",
         "Visualisation immersive de l'intérieur pour enrichir l'expérience utilisateur"
       ],
-      "image": "/images/mercedes-ar.jpg",
+      "image": "https://cdn.leonardo.ai/users/9d28ff5b-5c8e-48d1-9c17-b4218d2876a9/generations/94b9b34f-e275-4497-83dc-a230614ea42f/segments/2:4:1/Flux_Dev_A_futuristic_and_sleek_augmented_reality_visualizatio_1.jpeg",
       "github": "https://github.com/Esabrina77/mercedes-ar",
       "link": "https://mercedes-ar.demo.com"
     },
@@ -24,7 +24,7 @@
         "Modélisation statistique et prétraitement des données",
         "Obtention d'un modèle prédictif avec une précision de 98%"
       ],
-      "image": "/images/energy-prediction.jpg",
+      "image": "https://cdn.leonardo.ai/users/9d28ff5b-5c8e-48d1-9c17-b4218d2876a9/generations/585b6e96-4aee-4457-bd83-3adbc5d5e026/segments/3:4:1/Flux_Dev_A_futuristic_and_modern_illustration_depicting_the_pr_2.jpeg",
       "github": "https://github.com/Esabrina77/energy-prediction"
     }
   ]

@@ -1,18 +1,77 @@
 .blogPage {
-  @apply bg-[var(--bg-gradient-onyx)]
-         border border-solid border-[var(--white-alpha-25)]
-         rounded-[20px]
-         p-6 sm:p-8;
-  backdrop-filter: blur(10px);
+  @apply py-8 sm:py-16;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .pageTitle {
-  @apply text-4xl sm:text-5xl font-bold mb-12 text-center;
+  @apply text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 text-center;
   background: linear-gradient(to right, var(--orange-yellow-crayola), white);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .blogGrid {
-  @apply grid gap-8 sm:grid-cols-2 lg:grid-cols-3;
+  @apply grid gap-6 sm:gap-8
+         grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.blogCard {
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         overflow-hidden
+         transition-transform duration-300
+         hover:transform hover:scale-[1.02];
+}
+
+.imageContainer {
+  @apply relative w-full h-48 sm:h-56;
+}
+
+.blogImage {
+  @apply object-cover w-full h-full;
+}
+
+.cardContent {
+  @apply p-4 sm:p-6;
+}
+
+.blogTitle {
+  @apply text-xl sm:text-2xl font-bold mb-2
+         line-clamp-2;
+  color: var(--orange-yellow-crayola);
+}
+
+.blogDate {
+  @apply text-sm mb-3;
+  color: var(--white-alpha-40);
+}
+
+.blogExcerpt {
+  @apply text-sm sm:text-base mb-4
+         line-clamp-3;
+  color: var(--white-alpha-40);
+}
+
+.hashtags {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.hashtag {
+  @apply text-xs px-2 py-1 rounded-full
+         bg-[var(--white-alpha-25)]
+         text-[var(--white-alpha-40)];
+}
+
+.readMore {
+  @apply inline-block text-sm font-medium
+         px-4 py-2 rounded-full
+         border border-[var(--orange-yellow-crayola)]
+         text-[var(--orange-yellow-crayola)]
+         transition-colors duration-300
+         hover:bg-[var(--orange-yellow-crayola)]
+         hover:text-[var(--smoky-black)];
 } 

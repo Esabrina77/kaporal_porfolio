@@ -1,0 +1,57 @@
+.articlePage {
+  @apply py-8 sm:py-16;
+}
+
+.container {
+  @apply max-w-4xl mx-auto px-4 sm:px-6;
+}
+
+.backLink {
+  @apply inline-block mb-8
+         text-sm font-medium
+         text-[var(--orange-yellow-crayola)]
+         hover:opacity-80;
+}
+
+.articleHeader {
+  @apply mb-8;
+}
+
+.articleTitle {
+  @apply text-2xl sm:text-3xl lg:text-4xl font-bold mb-4;
+  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.articleDate {
+  @apply block text-sm;
+  color: var(--white-alpha-40);
+}
+
+.articleImage {
+  @apply relative w-full h-48 sm:h-64 lg:h-[400px]
+         rounded-[20px] overflow-hidden mb-8;
+}
+
+.articleImage img {
+  @apply object-cover;
+}
+
+.articleContent {
+  @apply space-y-6 mb-8
+         text-base sm:text-lg
+         leading-relaxed;
+  color: var(--white-alpha-40);
+}
+
+.hashtags {
+  @apply flex flex-wrap gap-2 mt-8 pt-8
+         border-t border-[var(--white-alpha-25)];
+}
+
+.hashtag {
+  @apply text-sm px-3 py-1 rounded-full
+         bg-[var(--white-alpha-25)]
+         text-[var(--white-alpha-40)];
+} 
