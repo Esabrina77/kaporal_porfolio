@@ -57,26 +57,47 @@
     "technical": [
       {
         "category": "Langages",
-        "items": ["JavaScript", "TypeScript", "Python", "HTML", "CSS/SCSS", "PHP", "C++"]
+        "items": [
+          { "name": "JavaScript" },
+          { "name": "TypeScript" },
+          { "name": "Python" },
+          { "name": "HTML5" },
+          { "name": "CSS3" },
+          { "name": "SCSS" },
+          { "name": "PHP" },
+          { "name": "C++" }
+        ]
       },
       {
         "category": "Frameworks",
-        "items": ["Vue.js", "Next.js", "Node.js"]
+        "items": [
+          { "name": "Vue" },
+          { "name": "Next" },
+          { "name": "Node" }
+        ]
       },
       {
         "category": "Base de données",
-        "items": ["PostgreSQL", "MySQL"]
+        "items": [
+          { "name": "PostgreSQL" },
+          { "name": "MySQL" }
+        ]
       },
       {
         "category": "Outils",
-        "items": ["Visual Studio", "VSCode", "Unity", "Git", "GitHub", "Figma", "Postman"]
+        "items": [
+          { "name": "Git" },
+          { "name": "GitHub" },
+          { "name": "Figma" },
+          { "name": "Postman" }
+        ]
       }
     ],
     "soft": [
-      "Communication efficace",
-      "Gestion du temps",
-      "Curiosité",
-      "Adaptabilité"
+      { "name": "Communication efficace", "emoji": "💬" },
+      { "name": "Gestion du temps", "emoji": "⏰" },
+      { "name": "Curiosité", "emoji": "🔍" },
+      { "name": "Adaptabilité", "emoji": "🔄" }
     ]
   },
   "languages": [

@@ -1,0 +1,73 @@
+.skillsPage {
+  @apply py-16 sm:py-24;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.pageTitle {
+  @apply text-4xl sm:text-5xl font-bold mb-12 text-center;
+  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.skillsGrid {
+  @apply grid gap-8 sm:grid-cols-2 mb-12;
+}
+
+.skillCategory {
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         p-6;
+}
+
+.categoryTitle {
+  @apply text-2xl font-bold mb-4;
+  color: var(--orange-yellow-crayola);
+}
+
+.skillsList {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.skillItem {
+  @apply flex items-center gap-3 p-3
+         bg-[var(--white-alpha-25)]
+         rounded-full;
+}
+
+.skillIcon {
+  @apply w-5 h-5;
+}
+
+.skillName {
+  @apply text-sm font-medium;
+}
+
+.softSkills {
+  @apply mt-12;
+}
+
+.sectionTitle {
+  @apply text-2xl font-bold mb-6;
+  color: var(--orange-yellow-crayola);
+}
+
+.softSkillsList {
+  @apply grid grid-cols-2 sm:grid-cols-4 gap-4;
+}
+
+.softSkillItem {
+  @apply p-4
+         bg-[var(--white-alpha-25)]
+         rounded-[20px]
+         text-center
+         flex flex-col items-center gap-2;
+}
+
+.softSkillEmoji {
+  @apply text-2xl;
+} 

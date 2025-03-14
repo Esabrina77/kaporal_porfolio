@@ -1,0 +1,100 @@
+.educationPage {
+  @apply py-16 sm:py-24;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.pageTitle {
+  @apply text-4xl sm:text-5xl font-bold mb-12 text-center;
+  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.sectionTitle {
+  @apply text-2xl font-bold mb-6;
+  color: var(--orange-yellow-crayola);
+}
+
+.educationSection {
+  @apply mb-12;
+}
+
+.educationCard {
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         p-6 mb-6
+         transition-all duration-300
+         hover:transform hover:scale-[1.02];
+}
+
+.degree {
+  @apply text-xl font-bold mb-2;
+  color: var(--orange-yellow-crayola);
+}
+
+.school {
+  @apply text-lg mb-1;
+}
+
+.period {
+  @apply text-sm mb-4;
+  color: var(--white-alpha-40);
+}
+
+.description {
+  @apply mb-4;
+  color: var(--white-alpha-40);
+}
+
+.projects {
+  @apply space-y-2 list-disc list-inside;
+  color: var(--white-alpha-40);
+}
+
+.certificationsSection {
+  @apply mt-12;
+}
+
+.certificationsGrid {
+  @apply grid gap-6 sm:grid-cols-2;
+}
+
+.certificationCard {
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         p-6
+         transition-all duration-300
+         hover:transform hover:scale-[1.02];
+}
+
+.certTitle {
+  @apply text-lg font-bold mb-2;
+  color: var(--orange-yellow-crayola);
+}
+
+.certIssuer {
+  @apply text-sm mb-1;
+}
+
+.certDate {
+  @apply text-sm mb-2;
+  color: var(--white-alpha-40);
+}
+
+.certDetails {
+  @apply mb-2;
+  color: var(--white-alpha-40);
+}
+
+.certCode {
+  @apply text-sm font-mono
+         px-3 py-1
+         bg-[var(--white-alpha-25)]
+         rounded-full
+         inline-block;
+} 

@@ -1,0 +1,40 @@
+{
+    "posts": [
+      {
+        "title": "Le premier bug informatique était… un vrai insecte ?! 🦟",
+        "date": "2025-03-14",
+        "content": "Tout est parti d’un commentaire sous l’un de mes posts. Florian Benedetto mentionnait que COBOL était le \"bébé\" du Department of Defense et de Grace Hopper, et qu’elle était aussi liée à l’origine du mot \"bug\" en informatique. Curieuse, j’ai creusé…\n\nEn 1947, sur l’ordinateur Harvard Mark II, une équipe de techniciens essaie de comprendre pourquoi la machine plante. En l’ouvrant, ils découvrent… une mite coincée dans un relais électrique ! Ils notent l’incident dans leur journal de bord sous le terme \"bug\", et le mot est resté. Aujourd’hui, quand on parle de \"debugging\", on doit indirectement ce terme à cet événement.\n\nCOBOL, quant à lui, continue d’être utilisé dans les banques, assurances et administrations, preuve que certains langages sont éternels !",
+        "hashtags": ["COBOL", "GraceHopper", "Bug", "TechHistory", "VeilleTechnologique"],
+        "image": "https://kaporelo.com/images/blog/bug-hopper.jpg"
+      },
+      {
+        "title": "Les anciens langages ont-ils vraiment disparu ? 🏛️➡️🚀",
+        "date": "2025-03-13",
+        "content": "On parle souvent des langages modernes comme Python, Rust, Swift, mais leurs concepts viennent de bien plus loin.\n\n📌 Saviez-vous que la Programmation Orientée Objet vient de Simula (1967) ? Ce langage a introduit les classes et objets, qu’on retrouve aujourd’hui dans Java, C++ et Python.\n📌 Les langages fonctionnels comme Haskell et ML doivent beaucoup à ISWIM (1966).\n📌 Les itérateurs et la gestion des exceptions sont nés avec CLU (années 1970), avant d’être intégrés dans Python et Ruby.\n\nFinalement, les vieux langages n’ont jamais vraiment disparu. Ils vivent à travers les outils que nous utilisons tous les jours. 💡",
+        "hashtags": ["Programmation", "HéritageTech", "VeilleTechnologique", "Innovation", "COBOL"],
+        "image": "https://kaporelo.com/images/blog/langages-historiques.jpg"
+      },
+      {
+        "title": "L'IA peut-elle vraiment sauver le COBOL ? 🤖💾",
+        "date": "2025-03-12",
+        "content": "Le COBOL fait tourner les banques, les assurances, et même certains systèmes gouvernementaux depuis plus de 60 ans. Mais les développeurs COBOL partent à la retraite et les entreprises n’ont toujours pas trouvé de solution viable.\n\nIBM semble avoir une réponse : Watsonx Code Assistant for Z, un outil d’IA conçu pour traduire automatiquement du COBOL en Java.\n\n➡️ Pourquoi c’est un sujet brûlant ?\nMigrer du COBOL est un cauchemar : trop de dépendances, des milliards de lignes de code, et des risques énormes.\nL’IA pourrait accélérer la transition en générant du Java à partir de COBOL, mais peut-elle vraiment comprendre des systèmes aussi complexes ?\n\nL’IA va-t-elle réellement sauver le COBOL ou juste en retarder la chute ?",
+        "hashtags": ["IBM", "watsonx", "COBOL", "Java", "IA", "Modernisation"],
+        "image": "https://kaporelo.com/images/blog/cobol-ia.jpg"
+      },
+      {
+        "title": "Quand les idées de post ne viennent pas... 😩",
+        "date": "2025-03-11",
+        "content": "Je vais être honnête : trouver des idées de posts tous les jours, c'est plus dur que prévu.\n\nAlors, aujourd'hui, j'ai décidé d'en parler. Parce que soyons réalistes, poster tous les jours et ne jamais dépasser 5 likes, c'est frustrant. 😅\n\nMais pourquoi c'est si compliqué d'attirer l'attention ?\nLes algorithmes ? Oui, mais pas que.\nLe timing ? Peut-être.\nLe contenu ? C'est sûrement là que ça se joue.\n\nAlors, au lieu de me décourager, je me dis que c'est le moment d'expérimenter, d'apprendre et d'ajuster. Parce qu'après tout, même les plus grands ont commencé avec 0 like.",
+        "hashtags": ["30DaysChallenge", "LinkedInJourney", "Apprentissage", "Persévérance"],
+        "image": "https://kaporelo.com/images/blog/post-idee.jpg"
+      },
+      {
+        "title": "🚨 Les banques en danger ? Le COBOL, ce langage vieux de 64 ans, tient encore les clés de nos transactions financières !",
+        "date": "2025-03-10",
+        "content": "Malgré son âge, il continue de gérer une majorité des transactions bancaires et des opérations d'assurance. Cependant, une crise silencieuse se profile : la pénurie de développeurs maîtrisant ce langage essentiel.\n\nLa génération de programmeurs COBOL approche de la retraite, et les jeunes développeurs se tournent vers des langages plus modernes, laissant un vide préoccupant...",
+        "hashtags": ["COBOL", "Banque", "30days", "Challenge", "Jour6"],
+        "image": "https://kaporelo.com/images/blog/cobol-banque.jpg"
+      }
+    ]
+  }
+  

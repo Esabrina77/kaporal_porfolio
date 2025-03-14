@@ -11,8 +11,13 @@
            grid gap-8 sm:gap-12;
   }
   
+  .mainContent {
+    @apply space-y-6;
+  }
+  
   .heading {
-    @apply text-4xl sm:text-5xl lg:text-6xl
+    font-size: 2.4rem;
+    @apply 
            font-bold
            mb-6;
     background: linear-gradient(to right, var(--orange-yellow-crayola), white);
@@ -21,14 +26,53 @@
   }
   
   .description {
-    @apply text-lg sm:text-xl
+    @apply text-base sm:text-lg
            leading-relaxed
            mb-8
            text-[var(--white-alpha-40)];
   }
   
+  .navigation {
+    @apply flex flex-wrap gap-4 mb-6;
+  }
+  
+  .navLink {
+    @apply inline-flex items-center
+           px-6 py-2.5
+           rounded-full
+           text-base font-medium
+           border-2 border-[var(--orange-yellow-crayola)]
+           text-[var(--orange-yellow-crayola)]
+           transition-all duration-300
+           hover:bg-[var(--orange-yellow-crayola)]
+           hover:text-[var(--smoky-black)]
+           hover:shadow-lg
+           hover:scale-105
+           active:transform active:scale-95;
+  }
+  
+  .languages {
+    @apply mb-8;
+  }
+  
+  .sectionTitle {
+    @apply text-base font-medium mb-3;
+    color: var(--orange-yellow-crayola);
+  }
+  
+  .languagesList {
+    @apply flex flex-wrap gap-3;
+  }
+  
+  .languageTag {
+    @apply px-2 py-1
+           rounded-full text-xs
+           bg-[var(--white-alpha-25)]
+           text-[var(--white-alpha-40)];
+  }
+  
   .cta {
-    @apply flex flex-wrap gap-4;
+    @apply flex flex-wrap gap-4 mt-8;
   }
   
   .ctaButton {
@@ -52,4 +96,11 @@
            transition-colors duration-300
            hover:bg-[var(--orange-yellow-crayola)]
            hover:text-[var(--smoky-black)];
+  }
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    .navLink {
+      @apply px-4 py-2 text-sm;
+    }
   }

@@ -1,0 +1,85 @@
+.errorContainer {
+  @apply min-h-[80vh]
+         flex items-center justify-center
+         px-4;
+}
+
+.errorContent {
+  @apply bg-[var(--bg-gradient-onyx)]
+         border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         p-8 sm:p-12
+         text-center
+         max-w-2xl
+         w-full;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.errorCode {
+  @apply text-8xl sm:text-9xl font-bold mb-4;
+  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: pulse 2s infinite;
+}
+
+.errorTitle {
+  @apply text-2xl sm:text-3xl font-bold mb-4;
+  color: var(--orange-yellow-crayola);
+}
+
+.errorDescription {
+  @apply text-lg mb-8;
+  color: var(--white-alpha-40);
+}
+
+.actions {
+  @apply flex flex-wrap justify-center gap-4;
+}
+
+.homeButton {
+  @apply inline-block
+         bg-[var(--orange-yellow-crayola)]
+         text-[var(--smoky-black)]
+         font-medium
+         py-3 px-6
+         rounded-full
+         transition-opacity duration-300
+         hover:opacity-90;
+}
+
+.backButton {
+  @apply inline-block
+         border border-solid border-[var(--orange-yellow-crayola)]
+         text-[var(--orange-yellow-crayola)]
+         font-medium
+         py-3 px-6
+         rounded-full
+         transition-colors duration-300
+         hover:bg-[var(--orange-yellow-crayola)]
+         hover:text-[var(--smoky-black)];
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+} 

@@ -16,8 +16,8 @@ export default function Sidebar() {
           <Image
             src="/images/kaporelo.jpg"
             alt="Sabrina Eloundou"
-            width={200}
-            height={200}
+            width={500}
+            height={500}
             priority
           />
         </figure>
