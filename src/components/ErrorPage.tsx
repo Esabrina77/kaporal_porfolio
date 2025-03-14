@@ -6,7 +6,11 @@ import styles from '@/styles/components/ErrorPage.module.css';
 const errorMessages = {
   '404': {
     title: 'Page introuvable',
-    description: 'Oups ! ca n\'existe pas ! hhahaha'
+    description: 'Oups ! ça n\'existe pas ! hhahaha'
+  },
+  '503': {
+    title: 'Service temporairement indisponible',
+    description: 'Le serveur est actuellement indisponible. Veuillez réessayer dans quelques instants.'
   },
   'default': {
     title: 'Une erreur est survenue',
@@ -14,7 +18,7 @@ const errorMessages = {
   }
 };
 
-export default function ErrorPage({ code = '404', reset }: { code?: '404' | 'default', reset?: () => void }) {
+export default function ErrorPage({ code = '404', reset }: { code?: '404' | '503' | 'default', reset?: () => void }) {
   const message = errorMessages[code] || errorMessages.default;
 
   return (
