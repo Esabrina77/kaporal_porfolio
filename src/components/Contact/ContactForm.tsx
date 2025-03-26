@@ -6,7 +6,7 @@ import { FaEnvelope, FaPhone, FaInstagram, FaLinkedin, FaGithub } from 'react-ic
 export default function ContactForm() {
   const contactInfo = {
     email: 'sabrinaeloundou33@gmail.com',
-    phone: '+33 6 35 59 44 26', // Remplacez par votre numéro
+    phone: 'il a été rétiré à cause des appels et messages inutiles', // Remplacez par votre numéro
     instagram: 'https://instagram.com/sabrina_eloundou', // Remplacez par votre compte
     linkedin: 'https://www.linkedin.com/in/sabrina-eloundou-706372295/',
     github: 'https://github.com/Esabrina77'
@@ -31,7 +31,7 @@ export default function ContactForm() {
         </a>
 
         <a 
-          href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
+{/*           href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} */}
           className={styles.contactItem}
         >
           <FaPhone className={styles.contactIcon} />
