@@ -1,30 +1,48 @@
 {
-  "experience": [
-    {
-      "title": "Développeuse (Stage)",
-      "company": "LINK2BRAIN",
-      "location": "Marseille",
-      "period": "Janvier 2025 - Présent",
-      "technologies": ["Vue.js", "Figma", "TypeScript", "SCSS", "REST API", "POSTMAN", "MySqL", "AGILE"],
-      "achievements": [
-        "Conception et développement d'une plateforme de gestion de médias sociaux",
-        "Création d'une interface responsive et fluide avec navigation optimisée",
-        "Développement d'un module d'analyse de performance avec visualisation interactive des données"
-      ]
-    },
-    {
-      "title": "Développeuse",
-      "company": "IATRAX",
-      "location": "Marseille",
-      "period": "2024 (3 Mois)",
-      "technologies": ["Vue.js", "TypeScript", "SCSS", "Render", "Figma", "SEO", "AGILE"],
-      "achievements": [
-        "Conception d'une interface web interactive et responsive à partir de maquettes",
-        "Optimisation des performances (lazy loading, code splitting) et mise en place des bonnes pratiques SEO",
-        "Structuration modulaire des styles pour faciliter la maintenance"
-      ]
-    }
-  ],
+ "experience": [
+  {
+    "title": "Développeuse fullstack JavaScript (Stage)",
+    "company": "LINK2BRAIN",
+    "location": "Marseille",
+    "period": "Janvier 2025 – Mai 2025",
+    "technologies": ["Vue.js", "JavaScript", "HTML5", "CSS3", "Figma", "Git", "Responsive Design"],
+    "achievements": [
+      "Participation au développement de l'extranet et du site vitrine de Link2Brain à partir de maquettes Figma",
+      "Ajout de fonctionnalités avancées : publication enrichie (carrousels, stories, vidéos), blog, statistiques de performance",
+      "Création d’un mini CMS simulé pour la gestion de contenu côté admin, sans back-end connecté",
+      "Refonte responsive complète du site dev.link2brain.com (mobile + desktop), débogage multi-navigateurs",
+      "Amélioration du code existant : structuration des composants Vue.js, suppression des duplications, respect des bonnes pratiques UI"
+    ]
+  },
+  {
+    "title": "Développeuse fullstack JavaScript",
+    "company": "IATRAX",
+    "location": "Marseille",
+    "period": "Juin 2024 – Septembre 2024",
+    "technologies": ["Vue.js", "TypeScript", "HTML", "CSS", "Figma", "i18n", "Git"],
+    "achievements": [
+      "Développement d’un site vitrine multilingue (FR/EN) avec Vue.js en intégrant des maquettes Figma pixel-perfect",
+      "Mise en place d’un blog administrateur avec interface de connexion simulée, et affichage dynamique de contenu fictif",
+      "Conception d’un extranet client statique avec dashboard, création/modification de comptes, en simulation front uniquement",
+      "Structuration du projet pour intégration future avec le back-end Node.js/MariaDB géré par l’équipe principale",
+      "Utilisation de données mockées pour permettre la navigation et l’affichage sans dépendance serveur"
+    ]
+  },
+  {
+    "title": "Développeuse mobile hybride (Stage – Summer School)",
+    "company": "AIX YNOV CAMPUS",
+    "location": "Aix-en-Provence",
+    "period": "Mai 2024 – Juillet 2024",
+    "technologies": ["Ionic", "Capacitor", "Angular", "JavaScript", "PostgreSQL", "Figma", "Git"],
+    "achievements": [
+      "Conception et développement d’une application mobile dédiée à la gestion des retards, absences et décharges de sortie pour les étudiants",
+      "Implémentation de l’enregistrement automatisé des retards via scan de QR code quotidien généré par le campus",
+      "Ajout d’une fonctionnalité de dépôt numérique des justificatifs, avec traitement côté administration",
+      "Participation à l’optimisation des processus pédagogiques (réduction papier, fiabilisation des données)",
+      "Travail en équipe pluridisciplinaire avec développeurs web, designers UI/UX et coordinateurs pédagogiques"
+    ]
+  }
+ ],
   "education": [
     {
       "degree": "Bachelor Informatique",

@@ -176,7 +176,12 @@
     height: calc(100vh - 100px);
   }
 }
-
+/* Cacher le bouton burger sur les écrans larges (desktop >= 768px ou selon ta grille) */
+@media screen and (min-width: 768px) {
+  .burgerButton {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .header {
     height: 80px;
