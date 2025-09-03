@@ -1,8 +1,17 @@
+import { Metadata } from 'next';
 import styles from '@/styles/app/education/education.module.css';
-import profileData from '@/data/profile.json';
+
+export const metadata: Metadata = {
+  title: 'Formation | Sabrina ELOUNDOU - Bachelor Informatique & Certifications Tech',
+  description: 'Mon parcours académique et certifications : Bachelor Informatique Ynov Campus, certification Opquast, Three.js Journey. Formation technique avancée.',
+  keywords: ['formation', 'Bachelor Informatique', 'Ynov Campus', 'Opquast', 'Three.js', 'certifications tech'],
+};
 
 export default function EducationPage() {
-  const { education, certifications } = profileData;
+  // Import direct des données pour éviter les erreurs côté serveur
+  const profileData = require('@/data/profile.json');
+  const education = profileData.education || [];
+  const certifications = profileData.certifications || [];
 
   return (
     <div className={styles.educationPage}>

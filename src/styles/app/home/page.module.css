@@ -39,6 +39,78 @@
          hover:text-[var(--smoky-black)];
 }
 
+/* Section Entrepreneuriat */
+.entrepreneurshipSection {
+  @apply w-full;
+}
+
+.entrepreneurshipCard {
+  @apply border border-solid border-[var(--white-alpha-25)]
+         rounded-[20px]
+         p-6 sm:p-8;
+  backdrop-filter: blur(10px);
+}
+
+.entrepreneurshipContent {
+  @apply space-y-6;
+}
+
+.companyName {
+  @apply text-3xl font-bold text-center;
+  background: linear-gradient(45deg, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.companyDescription {
+  @apply text-center text-lg leading-relaxed max-w-4xl mx-auto;
+  color: var(--white-alpha-80);
+}
+
+.companyDescription strong {
+  color: var(--orange-yellow-crayola);
+  font-weight: 700;
+}
+
+.entrepreneurshipStats {
+  @apply grid grid-cols-3 gap-6 max-w-2xl mx-auto;
+}
+
+.entrepreneurshipStats .stat {
+  @apply text-center;
+}
+
+.entrepreneurshipStats .statNumber {
+  @apply block text-3xl font-bold mb-2;
+  color: var(--orange-yellow-crayola);
+}
+
+.entrepreneurshipStats .statLabel {
+  @apply text-sm;
+  color: var(--white-alpha-60);
+}
+
+.entrepreneurshipLinks {
+  @apply flex gap-4 justify-center flex-wrap;
+}
+
+.primaryLink, .secondaryLink {
+  @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+}
+
+.primaryLink {
+  @apply bg-gradient-to-r from-[var(--orange-yellow-crayola)] to-yellow-400
+         text-[var(--smoky-black)] font-semibold
+         hover:shadow-lg hover:scale-105;
+}
+
+.secondaryLink {
+  @apply border-2 border-solid border-[var(--orange-yellow-crayola)]
+         text-[var(--orange-yellow-crayola)]
+         hover:bg-[var(--orange-yellow-crayola)] hover:text-[var(--smoky-black)];
+}
+
 @media (max-width: 1280px) {
   .container {
     @apply px-4;
@@ -52,6 +124,37 @@
 @media (max-width: 1024px) {
   .content {
     @apply ml-0;
+  }
+  
+  .entrepreneurshipStats {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .entrepreneurshipLinks {
+    @apply flex-col items-center;
+  }
+  
+  .primaryLink, .secondaryLink {
+    @apply w-full max-w-xs text-center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .mainSection {
+    padding-top: 0px;
+  }
+
+  .sectionHeader {
+    @apply flex-col gap-4 text-center;
+  }
+  
+  .companyName {
+    @apply text-2xl;
+  }
+  
+  .companyDescription {
+    @apply text-base;
   }
 }
 

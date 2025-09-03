@@ -36,15 +36,27 @@
 .skillItem {
   @apply flex items-center gap-3 p-3
          bg-[var(--white-alpha-25)]
-         rounded-full;
+         rounded-full
+         transition-all duration-300
+         hover:bg-[var(--white-alpha-40)];
 }
 
 .skillIcon {
-  @apply w-5 h-5;
+  @apply w-5 h-5 flex-shrink-0;
+}
+
+.skillInfo {
+  @apply flex flex-col;
 }
 
 .skillName {
   @apply text-sm font-medium;
+  color: var(--white-alpha-80);
+}
+
+.skillLevel {
+  @apply text-xs font-medium;
+  color: var(--orange-yellow-crayola);
 }
 
 .softSkills {
@@ -65,9 +77,26 @@
          bg-[var(--white-alpha-25)]
          rounded-[20px]
          text-center
-         flex flex-col items-center gap-2;
+         flex flex-col items-center gap-2
+         transition-all duration-300
+         hover:bg-[var(--white-alpha-40)]
+         hover:transform hover:scale-105;
 }
 
 .softSkillEmoji {
   @apply text-2xl;
+}
+
+.softSkillInfo {
+  @apply flex flex-col items-center gap-1;
+}
+
+.softSkillName {
+  @apply text-sm font-medium;
+  color: var(--white-alpha-80);
+}
+
+.softSkillLevel {
+  @apply text-xs font-medium;
+  color: var(--orange-yellow-crayola);
 } 

@@ -39,14 +39,41 @@
   @apply w-full h-full object-cover;
 }
 
+/* Badge de statut */
+.statusBadge {
+  @apply absolute top-3 right-3;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.statusText {
+  @apply text-xs font-medium text-white;
+}
+
+.projectHeader {
+  @apply flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3;
+}
+
 .projectTitle {
-  @apply text-xl font-bold mb-2;
+  @apply text-xl font-bold;
   color: var(--orange-yellow-crayola);
 }
 
+.companyBadge {
+  @apply text-xs px-3 py-1 rounded-full bg-[var(--orange-yellow-crayola)] text-[var(--smoky-black)] font-medium;
+  align-self: flex-start;
+}
+
 .projectPeriod {
-  @apply text-sm mb-4;
+  @apply text-sm mb-2;
   color: var(--white-alpha-40);
+}
+
+.projectRole {
+  @apply text-sm mb-3 font-medium;
+  color: var(--white-alpha-60);
 }
 
 .technologies {
@@ -59,7 +86,35 @@
 }
 
 .projectDescription {
-  @apply mb-4 text-[var(--white-alpha-40)];
+  @apply mb-4 text-[var(--white-alpha-40)] leading-relaxed;
+}
+
+/* Highlights des projets */
+.projectHighlights {
+  @apply mb-4;
+}
+
+.highlightsTitle {
+  @apply text-sm font-semibold mb-2;
+  color: var(--orange-yellow-crayola);
+}
+
+.highlightsList {
+  @apply space-y-1;
+}
+
+.highlightItem {
+  @apply text-xs leading-relaxed;
+  color: var(--white-alpha-60);
+  position: relative;
+  padding-left: 1rem;
+}
+
+.highlightItem:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--orange-yellow-crayola);
 }
 
 .projectPoints {
@@ -68,12 +123,36 @@
 }
 
 .projectLinks {
-  @apply flex gap-4;
+  @apply flex gap-3 mt-4;
 }
 
-.projectLinks a {
+.projectLink {
   @apply flex items-center gap-2
-         text-sm
-         transition-colors duration-300
-         hover:text-[var(--orange-yellow-crayola)];
+         text-sm px-4 py-2 rounded-lg
+         bg-[var(--white-alpha-10)] border border-[var(--white-alpha-25)]
+         transition-all duration-300
+         hover:bg-[var(--orange-yellow-crayola)] hover:text-[var(--smoky-black)] hover:border-[var(--orange-yellow-crayola)];
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projectsGrid {
+    @apply grid-cols-1;
+  }
+  
+  .projectHeader {
+    @apply flex-col;
+  }
+  
+  .companyBadge {
+    align-self: flex-start;
+  }
+  
+  .projectLinks {
+    @apply flex-col;
+  }
+  
+  .projectLink {
+    @apply text-center justify-center;
+  }
 } 

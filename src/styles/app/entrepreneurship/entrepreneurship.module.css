@@ -1,0 +1,212 @@
+/* Page Entrepreneurship - Style narratif et valorisant */
+.entrepreneurshipPage {
+  @apply min-h-screen py-16 sm:py-24;
+}
+
+.pageContainer {
+  @apply pt-32 pb-16 sm:pb-24; /* Adjusted for fixed header */
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.pageTitle {
+  @apply text-4xl sm:text-5xl font-bold mb-12 text-center;
+  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Sections Générales */
+.kaporeloSection, .kaweplaSection, .ctaSection {
+  @apply mb-12 p-8 rounded-2xl;
+  background: transparent;
+  border: 1px solid var(--white-alpha-25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.kaporeloSection:hover, .kaweplaSection:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--orange-yellow-crayola);
+}
+
+.sectionHeader {
+  @apply flex justify-between items-center mb-6 flex-wrap gap-4;
+}
+
+.sectionTitle {
+  @apply text-3xl sm:text-4xl font-bold;
+  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.externalLink {
+  @apply text-base font-medium px-4 py-2 rounded-full
+         border border-solid border-[var(--orange-yellow-crayola)]
+         text-[var(--orange-yellow-crayola)]
+         transition-colors duration-300
+         hover:bg-[var(--orange-yellow-crayola)]
+         hover:text-[var(--smoky-black)];
+}
+
+.contentBlock {
+  @apply space-y-8;
+}
+
+.blockDescription {
+  @apply text-lg leading-relaxed;
+  color: var(--white-alpha-80);
+  line-height: 1.7;
+}
+
+.highlight {
+  color: var(--orange-yellow-crayola);
+  font-weight: 700;
+}
+
+/* Vision, Mission, Values */
+.visionMissionValues {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.valueCard {
+  @apply p-6 rounded-xl;
+  /* background: var(--white-alpha-10); */
+  border: 1px solid var(--white-alpha-25);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.valueTitle {
+  @apply text-xl font-bold mb-3;
+  color: var(--orange-yellow-crayola);
+}
+
+.valueText {
+  @apply text-sm leading-relaxed;
+  color: var(--white-alpha-60);
+}
+
+.valueList {
+  @apply list-none p-0 space-y-1;
+}
+
+.valueList li {
+  @apply text-sm;
+  color: var(--white-alpha-60);
+}
+
+/* Achievements & Impact Blocks */
+.achievementsBlock, .impactBlock {
+  @apply p-6 rounded-xl;
+  /* background: var(--white-alpha-10); */
+  border: 1px solid var(--white-alpha-25);
+  backdrop-filter: blur(10px);
+}
+
+.subTitle {
+  @apply text-xl font-bold mb-4;
+  color: var(--white-alpha-80);
+}
+
+.achievementsList {
+  @apply list-disc pl-5 space-y-2;
+}
+
+.achievementsList li {
+  @apply text-base leading-relaxed;
+  color: var(--white-alpha-60);
+}
+
+.achievementsList li strong {
+  color: var(--orange-yellow-crayola);
+  font-weight: 700;
+}
+
+/* Innovation Details (Kawepla) */
+.innovationDetails {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.innovationCard {
+  @apply p-6 rounded-xl;
+  /* background: var(--white-alpha-10); */
+  border: 1px solid var(--white-alpha-25);
+  backdrop-filter: blur(10px);
+}
+
+.innovationTitle {
+  @apply text-xl font-bold mb-4;
+  color: var(--orange-yellow-crayola);
+}
+
+.innovationList {
+  @apply list-disc pl-5 space-y-2;
+}
+
+.innovationList li {
+  @apply text-base leading-relaxed;
+  color: var(--white-alpha-60);
+}
+
+/* CTA Section */
+.ctaSection {
+  @apply text-center p-10 rounded-2xl;
+}
+
+.ctaTitle {
+  @apply text-3xl sm:text-4xl font-bold mb-4;
+  color: var(--orange-yellow-crayola);
+}
+
+.ctaDescription {
+  @apply text-lg max-w-2xl mx-auto mb-8 leading-relaxed;
+  color: var(--white-alpha-80);
+}
+
+.ctaButton {
+  @apply inline-block px-8 py-3 rounded-full font-semibold
+         bg-[var(--orange-yellow-crayola)] text-[var(--smoky-black)]
+         transition-all duration-300
+         hover:shadow-lg hover:scale-105;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding-top: 80px; /* Adjust for smaller header on mobile */
+  }
+  
+  .pageTitle {
+    @apply text-3xl mb-8;
+  }
+
+  .sectionTitle {
+    @apply text-2xl;
+  }
+
+  .visionMissionValues, .innovationDetails {
+    @apply grid-cols-1;
+  }
+
+  .valueCard, .innovationCard, .achievementsBlock, .impactBlock {
+    @apply p-5;
+  }
+
+  .blockDescription, .achievementsList li, .innovationList li, .valueText {
+    @apply text-sm;
+  }
+
+  .ctaTitle {
+    @apply text-2xl;
+  }
+
+  .ctaDescription {
+    @apply text-base;
+  }
+}

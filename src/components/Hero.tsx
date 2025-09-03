@@ -8,26 +8,62 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.mainContent}>
+        
+        {/* Badge Entrepreneur */}
+        <div className={styles.entrepreneurBadge}>
+          <span className={styles.badgeIcon}>🚀</span>
+          <span className={styles.badgeText}>Fondatrice & Innovatrice Tech</span>
+        </div>
 
-      <h2 className={styles.heading}>
- Développeuse Full Stack | IA | DevOps
-</h2>
+ *
+        
+        <h2 className={styles.heading}>
+          Architecte de Solutions Numériques | Entrepreneuse Tech | Expert DevOps & IoT
+        </h2>
 
-<p className={styles.description}>
-Passionnée par le développement logiciel et les nouvelles technologies, 
-  je conçois des solutions modernes et innovantes, alliant performance, accessibilité et design interactif.  
-  Mon parcours mêle Web, Intelligence Artificielle, IoT et DevOps, me permettant de créer des expériences uniques et évolutives.  
-  Toujours en quête de nouveaux défis, je repousse sans cesse mes limites pour bâtir des applications impactantes et futuristes.
-</p>
+        {/* Description Stratégique */}
+        <p className={styles.description}>
+          Je transforme des défis complexes en solutions technologiques innovantes. 
+          <strong>Fondatrice de Kaporelo</strong> et créatrice de <strong>Kawepla</strong>, 
+          je combine expertise technique avancée et vision entrepreneuriale pour créer des 
+          plateformes qui révolutionnent leur secteur.
+        </p>
 
 
+        {/* Statistiques Impactantes */}
+        <div className={styles.stats}>
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>3+</span>
+            <span className={styles.statLabel}>Années d'innovation</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>10+</span>
+            <span className={styles.statLabel}>Projets complexes</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>100%</span>
+            <span className={styles.statLabel}>Taux de réussite</span>
+          </div>
+        </div>
 
+        {/* Call-to-Action Principal */}
+        <div className={styles.ctaSection}>
+          <Link href="/projects" className={styles.primaryCTA}>
+            Découvrir Mes Innovations
+          </Link>
+          {/* <Link href="/skills" className={styles.secondaryCTA}>
+            Mes Atouts
+          </Link> */}
+        </div>
+
+        {/* Navigation Secondaire */}
         <nav className={styles.navigation}>
-          <Link href="/skills" className={styles.navLink}>Compétences</Link>
+          <Link href="/skills" className={styles.navLink}>Expertise Technique</Link>
+          <Link href="/experience" className={styles.navLink}>Parcours</Link>
           <Link href="/education" className={styles.navLink}>Formation</Link>
-          <Link href="/hobbies" className={styles.navLink}>Centres d&apos;intérêt</Link>
         </nav>
 
+        {/* Langues */}
         <div className={styles.languages}>
           <h3 className={styles.sectionTitle}>Langues</h3>
           <div className={styles.languagesList}>
@@ -39,8 +75,7 @@ Passionnée par le développement logiciel et les nouvelles technologies,
           </div>
         </div>
 
-     
       </div>
     </section>
   );
-} 
+}

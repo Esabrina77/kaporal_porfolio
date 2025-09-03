@@ -38,8 +38,13 @@
 }
 
 .title {
-  @apply text-2xl;
+  @apply text-2xl mb-2;
   color: var(--white-alpha-40);
+}
+
+.subtitle {
+  @apply text-lg font-medium;
+  color: var(--orange-yellow-crayola);
 }
 
 .infoMoreBtn {

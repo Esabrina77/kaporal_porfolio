@@ -1,58 +1,108 @@
 {
- "experience": [
-  {
-    "title": "Développeuse fullstack JavaScript (Stage)",
-    "company": "LINK2BRAIN",
-    "location": "Marseille",
-    "period": "Janvier 2025 – Mai 2025",
-    "technologies": ["Vue.js", "JavaScript", "HTML5", "CSS3", "Figma", "Git", "Responsive Design"],
-    "achievements": [
-      "Participation au développement de l'extranet et du site vitrine de Link2Brain à partir de maquettes Figma",
-      "Ajout de fonctionnalités avancées : publication enrichie (carrousels, stories, vidéos), blog, statistiques de performance",
-      "Création d’un mini CMS simulé pour la gestion de contenu côté admin, sans back-end connecté",
-      "Refonte responsive complète du site dev.link2brain.com (mobile + desktop), débogage multi-navigateurs",
-      "Amélioration du code existant : structuration des composants Vue.js, suppression des duplications, respect des bonnes pratiques UI"
+  "personal": {
+    "name": "Sabrina ELOUNDOU",
+    "title": "Architecte de Solutions Numériques & Entrepreneuse Tech",
+    "tagline": "Je transforme des défis complexes en solutions technologiques innovantes",
+    "location": "Marseille, France",
+    "availability": "Disponible pour opportunités internationales",
+    "linkedin": "https://linkedin.com/in/sabrina-eloundou-706372295",
+    "github": "https://github.com/Esabrina77",
+    "portfolio": "www.kaporelo.com",
+    "company": "Kaporelo - Fondatrice & CEO"
+  },
+  "summary": {
+    "overview": "Innovatrice tech passionnée avec une expertise unique combinant développement full-stack, architecture DevOps, IoT et vision entrepreneuriale. Fondatrice de Kaporelo, j'ai créé Kawepla, une plateforme révolutionnaire de wedding planning qui démontre ma capacité à transformer des idées en solutions commerciales viables.",
+    "keyStrengths": [
+      "Architecture de solutions complexes et scalables",
+      "Développement full-stack moderne (Next.js, Node.js, PostgreSQL)",
+      "Infrastructure DevOps et IoT (pfSense, Docker, MQTT, ESP8266)",
+      "Vision business et stratégie produit",
+      "Gestion de projet et leadership technique"
+    ],
+    "targetRoles": [
+      "Senior Full-Stack Developer",
+      "Solutions Architect",
+      "Technical Lead",
+      "DevOps Engineer",
+      "Product Manager"
     ]
   },
-  {
-    "title": "Développeuse fullstack JavaScript",
-    "company": "IATRAX",
-    "location": "Marseille",
-    "period": "Juin 2024 – Septembre 2024",
-    "technologies": ["Vue.js", "TypeScript", "HTML", "CSS", "Figma", "i18n", "Git"],
+  "entrepreneurial": {
+    "company": "Kaporelo",
+    "role": "Fondatrice & CEO",
+    "period": "Depuis 2024",
+    "description": "Startup tech innovante spécialisée dans les solutions numériques disruptives",
     "achievements": [
-      "Développement d’un site vitrine multilingue (FR/EN) avec Vue.js en intégrant des maquettes Figma pixel-perfect",
-      "Mise en place d’un blog administrateur avec interface de connexion simulée, et affichage dynamique de contenu fictif",
-      "Conception d’un extranet client statique avec dashboard, création/modification de comptes, en simulation front uniquement",
-      "Structuration du projet pour intégration future avec le back-end Node.js/MariaDB géré par l’équipe principale",
-      "Utilisation de données mockées pour permettre la navigation et l’affichage sans dépendance serveur"
-    ]
+      "Création et lancement de Kawepla, plateforme de wedding planning",
+      "Développement d'une architecture technique scalable et moderne",
+      "Stratégie de partenariats avec marques premium",
+      "Positionnement sur un marché concurrentiel (mariage.net)"
+    ],
+    "kawepla": {
+      "name": "Kawepla",
+      "url": "https://kawepla.kaporelo.com",
+      "description": "Plateforme complète de gestion de mariage avec marketplace de prestataires",
+      "technologies": ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Docker"],
+      "innovations": [
+        "Système de billing intelligent avec forfaits cumulatifs",
+        "Marketplace intégré de prestataires de services",
+        "Architecture modulaire et scalable",
+        "Interface luxury design premium"
+      ]
+    }
   },
-  {
-    "title": "Développeuse mobile hybride (Stage – Summer School)",
-    "company": "AIX YNOV CAMPUS",
-    "location": "Aix-en-Provence",
-    "period": "Mai 2024 – Juillet 2024",
-    "technologies": ["Ionic", "Capacitor", "Angular", "JavaScript", "PostgreSQL", "Figma", "Git"],
-    "achievements": [
-      "Conception et développement d’une application mobile dédiée à la gestion des retards, absences et décharges de sortie pour les étudiants",
-      "Implémentation de l’enregistrement automatisé des retards via scan de QR code quotidien généré par le campus",
-      "Ajout d’une fonctionnalité de dépôt numérique des justificatifs, avec traitement côté administration",
-      "Participation à l’optimisation des processus pédagogiques (réduction papier, fiabilisation des données)",
-      "Travail en équipe pluridisciplinaire avec développeurs web, designers UI/UX et coordinateurs pédagogiques"
-    ]
-  }
- ],
+  "experience": [
+    {
+      "title": "Développeuse Full-Stack JavaScript (Stage)",
+      "company": "LINK2BRAIN",
+      "location": "Marseille",
+      "period": "Janvier 2025 – Mai 2025",
+      "technologies": ["Vue.js", "JavaScript", "HTML5", "CSS3", "Figma", "Git", "Responsive Design"],
+      "achievements": [
+        "Développement d'un extranet et site vitrine avec fonctionnalités avancées",
+        "Création d'un mini CMS simulé pour la gestion de contenu",
+        "Refonte responsive complète et optimisation multi-navigateurs",
+        "Amélioration de l'architecture des composants Vue.js"
+      ]
+    },
+    {
+      "title": "Développeuse Full-Stack JavaScript",
+      "company": "IATRAX",
+      "location": "Marseille",
+      "period": "Juin 2024 – Septembre 2024",
+      "technologies": ["Vue.js", "TypeScript", "HTML", "CSS", "Figma", "i18n", "Git"],
+      "achievements": [
+        "Développement d'un site vitrine multilingue (FR/EN) pixel-perfect",
+        "Conception d'un extranet client avec dashboard et gestion de comptes",
+        "Architecture front-end préparée pour l'intégration back-end Node.js/MariaDB",
+        "Structuration modulaire et maintenable du projet"
+      ]
+    },
+    {
+      "title": "Développeuse Mobile Hybride (Stage – Summer School)",
+      "company": "AIX YNOV CAMPUS",
+      "location": "Aix-en-Provence",
+      "period": "Mai 2024 – Juillet 2024",
+      "technologies": ["Ionic", "Capacitor", "Angular", "JavaScript", "PostgreSQL", "Figma", "Git"],
+      "achievements": [
+        "Conception et développement d'une application mobile de gestion pédagogique",
+        "Implémentation de système de scan QR code pour automatisation",
+        "Optimisation des processus pédagogiques et réduction de la charge administrative",
+        "Travail en équipe pluridisciplinaire et coordination de projet"
+      ]
+    }
+  ],
   "education": [
     {
       "degree": "Bachelor Informatique",
       "school": "AIX YNOV CAMPUS",
       "period": "Depuis oct. 2023",
-      "description": "Actuellement en 2ème année",
+      "description": "Formation en cours - 2ème année",
+      "focus": "Développement Full-Stack, Architecture Logicielle, DevOps, IoT",
       "projects": [
-        "Conception UX/UI mobile : Création de personas, wireframes et prototypes interactifs",
-        "Portfolio PHP : Gestion utilisateurs, projets et compétences, avec rôles et sécurité",
-        "Serveur Wiki.js : Installation et configuration d'une plateforme de documentation collaborative"
+        "Portfolio PHP avec gestion utilisateurs et sécurité avancée",
+        "Serveur Wiki.js pour documentation collaborative",
+        "Projets IoT avec microcontrôleurs ESP8266 et protocole MQTT"
       ]
     }
   ],
@@ -68,54 +118,73 @@
       "title": "Three.js Journey",
       "issuer": "Bruno Simon",
       "date": "Depuis déc. 2024",
-      "details": "Formation approfondie en Three.js et WebGL"
+      "details": "Formation approfondie en Three.js et WebGL pour applications 3D immersives"
     }
   ],
   "skills": {
     "technical": [
       {
-        "category": "Langages",
+        "category": "Langages de Programmation",
         "items": [
-          { "name": "JavaScript" },
-          { "name": "TypeScript" },
-          { "name": "Python" },
-          { "name": "HTML5" },
-          { "name": "CSS3" },
-          { "name": "SCSS" },
-          { "name": "PHP" },
-          { "name": "CPP" }
+          { "name": "JavaScript/TypeScript", "level": "Avancé" },
+          { "name": "Python", "level": "Avancé" },
+          { "name": "HTML5/CSS3/SCSS", "level": "Avancé" },
+          { "name": "PHP", "level": "Intermédiaire" },
+          { "name": "C++", "level": "Intermédiaire" }
         ]
       },
       {
-        "category": "Frameworks",
+        "category": "Frameworks & Technologies Web",
         "items": [
-          { "name": "Vue" },
-          { "name": "Next" },
-          { "name": "Node" }
+          { "name": "Next.js 14", "level": "Avancé" },
+          { "name": "Vue.js 3", "level": "Avancé" },
+          { "name": "Node.js/Express", "level": "Avancé" },
+          { "name": "React", "level": "Avancé" }
         ]
       },
       {
-        "category": "Base de données",
+        "category": "Bases de Données & ORM",
         "items": [
-          { "name": "PostgreSQL" },
-          { "name": "MySQL" }
+          { "name": "PostgreSQL", "level": "Avancé" },
+          { "name": "MySQL", "level": "Avancé" },
+          { "name": "Prisma ORM", "level": "Avancé" }
         ]
       },
       {
-        "category": "Outils",
+        "category": "DevOps & Infrastructure",
         "items": [
-          { "name": "Git" },
-          { "name": "GitHub" },
-          { "name": "Figma" },
-          { "name": "Postman" }
+          { "name": "Docker & Docker Compose", "level": "Avancé" },
+          { "name": "pfSense (Firewall/Router)", "level": "Avancé" },
+          { "name": "NGINX (Reverse Proxy)", "level": "Avancé" },
+          { "name": "Zabbix (Monitoring)", "level": "Intermédiaire" }
+        ]
+      },
+      {
+        "category": "IoT & Hardware",
+        "items": [
+          { "name": "ESP8266 Microcontrôleurs", "level": "Avancé" },
+          { "name": "Protocole MQTT", "level": "Avancé" },
+          { "name": "Capteurs & Actionneurs", "level": "Avancé" },
+          { "name": "Arduino", "level": "Intermédiaire" }
+        ]
+      },
+      {
+        "category": "Outils & Plateformes",
+        "items": [
+          { "name": "Git/GitHub", "level": "Avancé" },
+          { "name": "Figma", "level": "Avancé" },
+          { "name": "Postman", "level": "Avancé" },
+          { "name": "Three.js/WebGL", "level": "Débutant" }
         ]
       }
     ],
     "soft": [
-      { "name": "Communication efficace", "emoji": "💬" },
-      { "name": "Gestion du temps", "emoji": "⏰" },
-      { "name": "Curiosité", "emoji": "🔍" },
-      { "name": "Adaptabilité", "emoji": "🔄" }
+      { "name": "Leadership & Entrepreneuriat", "emoji": "🚀", "level": "Intermédiaire" },
+      { "name": "Résolution de problèmes complexes", "emoji": "🧠", "level": "Intermédiaire" },
+      { "name": "Communication technique", "emoji": "💬", "level": "Intermédiaire" },
+      { "name": "Gestion de projet", "emoji": "📊", "level": "Avancé" },
+      { "name": "Adaptabilité & Innovation", "emoji": "🔄", "level": "Intermédiaire" },
+      { "name": "Vision business", "emoji": "💡", "level": "Intermédiaire" }
     ]
   },
   "languages": [
@@ -125,13 +194,15 @@
     },
     {
       "name": "Anglais",
-      "level": "Intermédiaire"
+      "level": "Professionnel (B2+)"
     }
   ],
   "interests": [
+    "Innovation technologique",
+    "Entrepreneuriat",
+    "Architecture logicielle",
+    "IoT et objets connectés",
     "Piano",
-    "Lecture",
-    "Mots fléchés",
-    "Jeux vidéos (jeux narratifs, énigmes)"
+    "Lecture technique"
   ]
-} 
+}

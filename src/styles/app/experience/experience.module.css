@@ -2,6 +2,11 @@
   @apply py-16 sm:py-24;
 }
 
+.pageContainer {
+  @apply pt-32 pb-16 sm:pb-24;
+}
+
+
 .container {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
@@ -11,6 +16,16 @@
   background: linear-gradient(to right, var(--orange-yellow-crayola), white);
   -webkit-background-clip: text;
   color: transparent;
+}
+
+/* Sections */
+.entrepreneurialSection, .professionalSection {
+  @apply mb-16;
+}
+
+.sectionTitle {
+  @apply text-3xl font-bold mb-8 text-center;
+  color: var(--orange-yellow-crayola);
 }
 
 .timeline {
@@ -55,4 +70,50 @@
 .achievements {
   @apply space-y-2 list-disc list-inside;
   color: var(--white-alpha-40);
+}
+
+/* Styles pour la section entrepreneuriale */
+.entrepreneurialItem {
+  @apply bg-gradient-to-br from-purple-900/20 to-blue-900/20;
+  border-color: var(--orange-yellow-crayola);
+}
+
+.description {
+  @apply mb-4 text-[var(--white-alpha-60)] leading-relaxed;
+}
+
+.kaweplaHighlight {
+  @apply mt-6 p-4 bg-[var(--white-alpha-10)] rounded-lg border border-[var(--white-alpha-25)];
+}
+
+.projectTitle {
+  @apply text-lg font-bold mb-2;
+  color: var(--orange-yellow-crayola);
+}
+
+.projectDescription {
+  @apply mb-3 text-sm;
+  color: var(--white-alpha-60);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experiencePage {
+    @apply py-16 sm:py-24;
+  }
+
+  .pageContainer {
+    padding-top: 0px;
+  }
+  .pageTitle {
+    @apply text-3xl;
+  }
+  
+  .sectionTitle {
+    @apply text-2xl;
+  }
+  
+  .timelineTitle {
+    @apply text-xl;
+  }
 } 

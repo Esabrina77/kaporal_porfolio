@@ -1,31 +1,164 @@
 {
   "projects": [
     {
-      "title": "Mercedes AR APP",
-      "period": "janvier 2025",
+      "title": "Kawepla - Plateforme de Wedding Planning",
+      "period": "Depuis 2024",
+      "company": "Kaporelo (ma startup)",
+      "role": "Fondatrice, Architecte Technique & Lead Developer",
+      "technologies": ["Next.js 14", "Node.js", "PostgreSQL", "Prisma ORM", "Stripe", "Docker", "TypeScript"],
+      "description": "Plateforme révolutionnaire de gestion de mariage combinant un système de gestion d'événements avec un marketplace de prestataires de services. Solution complète qui rivalise avec mariage.net.",
+      "highlights": [
+        "Architecture full-stack moderne avec Next.js 14 et App Router",
+        "Système de billing intelligent avec forfaits cumulatifs et intégration Stripe",
+        "Marketplace intégré de prestataires avec système de réservation",
+        "Gestion avancée des invitations et des invités avec limites dynamiques",
+        "Interface luxury design premium et responsive",
+        "Système d'authentification multi-rôles (ADMIN, COUPLE, GUEST, PROVIDER)"
+      ],
+      "technicalAchievements": [
+        "Développement d'un système de limites intelligent avec hooks personnalisés",
+        "Architecture modulaire avec séparation claire des responsabilités",
+        "Intégration complète des paiements Stripe pour abonnements et achats",
+        "Système de validation robuste avec Zod et gestion d'erreurs centralisée",
+        "Optimisation des performances avec lazy loading et cache intelligent"
+      ],
+      "businessImpact": [
+        "Positionnement sur un marché concurrentiel (mariage.net)",
+        "Stratégie de partenariats avec marques premium et loueurs d'espace",
+        "Modèle économique innovant avec forfaits cumulatifs",
+        "Scalabilité pour expansion internationale"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/kawepla-6be10.firebasestorage.app/o/portfolio%2Fkawepla-client.png?alt=media&token=844917c5-01ed-46bc-af43-18714446a6ef",
+      "github": "https://github.com/Esabrina77/kawepla",
+      "link": "https://kawepla.kaporelo.com",
+      "status": "En développement actif - Refonte en cours"
+    },
+    {
+      "title": "Infrastructure DevOps & Sécurité Réseau",
+      "period": "2024",
+      "company": "Projet Académique Avancé",
+      "role": "Architecte Infrastructure & DevOps Engineer",
+      "technologies": ["pfSense", "Docker", "NGINX", "PostgreSQL", "MySQL", "Zabbix", "Ubuntu Server", "MQTT"],
+      "description": "Infrastructure réseau sécurisée et redondante avec segmentation LAN/DMZ/SERVICES, reverse proxy, monitoring et système de sauvegarde automatisé.",
+      "highlights": [
+        "Architecture réseau segmentée avec pfSense (LAN, DMZ, SERVICES)",
+        "Serveur web conteneurisé avec Docker Compose (WordPress, Next.js, Express)",
+        "Reverse proxy NGINX avec load balancing et sécurité avancée",
+        "Système de monitoring Zabbix pour supervision temps réel",
+        "Sauvegarde automatisée des bases de données et configurations",
+        "Gestion des certificats SSL/TLS et sécurisation des communications"
+      ],
+      "technicalAchievements": [
+        "Configuration avancée du pare-feu pfSense avec règles de filtrage",
+        "Déploiement de services conteneurisés avec orchestration Docker",
+        "Mise en place d'un système de monitoring complet avec alertes",
+        "Automatisation des sauvegardes et procédures de restauration",
+        "Documentation technique complète (DEX et architecture)"
+      ],
+      "businessValue": [
+        "Infrastructure enterprise-grade pour PME et startups",
+        "Sécurité réseau conforme aux standards professionnels",
+        "Scalabilité et maintenance simplifiée",
+        "Réduction des coûts d'infrastructure"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/kawepla-6be10.firebasestorage.app/o/portfolio%2Fzabbix.png?alt=media&token=e790ae70-9099-4f07-a3e5-fbbf7ecc7542",
+      "github": "https://github.com/Esabrina77/infrastructure-devops",
+      "status": "Complété - Documentation complète disponible"
+    },
+    {
+      "title": "Système IoT de Gestion de Parking Intelligent",
+      "period": "2024",
+      "company": "Projet IoT Avancé",
+      "role": "Architecte IoT & Développeur Full-Stack",
+      "technologies": ["ESP8266", "MQTT", "HTML/CSS/JavaScript", "Arduino", "Capteurs", "Actionneurs", "WiFi"],
+      "description": "Système IoT complet de réservation de places de parking avec tarification dynamique basée sur la pollution, gestion des barrières et interface web temps réel.",
+      "highlights": [
+        "Architecture IoT distribuée avec microcontrôleurs ESP8266",
+        "Système de réservation en temps réel via interface web",
+        "Tarification dynamique basée sur les niveaux de pollution",
+        "Gestion automatique des barrières et indicateurs LED",
+        "Communication MQTT pour synchronisation des composants",
+        "Interface utilisateur responsive et intuitive"
+      ],
+      "technicalAchievements": [
+        "Développement de firmware pour microcontrôleurs ESP8266",
+        "Implémentation du protocole MQTT pour communication IoT",
+        "Intégration de capteurs et actionneurs (distance, LED, servo)",
+        "Système de tarification algorithmique complexe",
+        "Architecture scalable pour déploiement multi-zones"
+      ],
+      "businessValue": [
+        "Solution de smart city pour gestion du trafic urbain",
+        "Réduction de la pollution et amélioration de la mobilité",
+        "Modèle économique avec tarification dynamique",
+        "Scalabilité pour déploiement urbain complet"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/kawepla-6be10.firebasestorage.app/o/portfolio%2Fiot-maket.png?alt=media&token=daa48507-d16a-457d-a6d5-91cb4964fbd9",
+      "github": "https://github.com/Esabrina77/iot_b2",
+      "status": "Complété - Démonstration fonctionnelle"
+    },
+    {
+      "title": "Mercedes AR APP - Application de Réalité Augmentée",
+      "period": "Janvier 2025",
+      "company": "Projet Innovation Tech",
+      "role": "Développeuse AR/VR & Frontend",
       "technologies": ["Next.js", "Three.js", "TypeScript", "WebXR", "SKETCHFAB"],
-      "description": "Application AR de visualisation d'une voiture Mercedes",
-      "points": [
-        "Détection des surfaces réelles pour un placement précis du modèle 3D",
-        "Contrôle interactif en temps réel (rotation des roues, déplacement du véhicule)",
-        "Visualisation immersive de l'intérieur pour enrichir l'expérience utilisateur"
+      "description": "Application AR immersive de visualisation de véhicules Mercedes avec détection de surfaces réelles et contrôle interactif en temps réel.",
+      "highlights": [
+        "Détection des surfaces réelles pour placement précis des modèles 3D",
+        "Contrôle interactif en temps réel (rotation des roues, déplacement)",
+        "Visualisation immersive de l'intérieur du véhicule",
+        "Interface utilisateur intuitive et responsive",
+        "Intégration avec plateforme SKETCHFAB pour modèles 3D"
+      ],
+      "technicalAchievements": [
+        "Développement WebXR pour expériences AR immersives",
+        "Intégration Three.js pour rendu 3D haute performance",
+        "Système de détection de surfaces et tracking AR",
+        "Optimisation des performances pour appareils mobiles",
+        "Interface utilisateur moderne avec Next.js 14"
+      ],
+      "businessValue": [
+        "Innovation dans l'industrie automobile",
+        "Expérience client immersive et engageante",
+        "Réduction des coûts de démonstration",
+        "Différenciation concurrentielle"
       ],
       "image": "https://cdn.leonardo.ai/users/9d28ff5b-5c8e-48d1-9c17-b4218d2876a9/generations/94b9b34f-e275-4497-83dc-a230614ea42f/segments/2:4:1/Flux_Dev_A_futuristic_and_sleek_augmented_reality_visualizatio_1.jpeg",
       "github": "https://github.com/Esabrina77/mercedes-ar",
-      "link": "https://mercedes-ar.demo.com"
+      "link": "https://mercedes-ar.kaporelo.com",
+      "status": "Complété - Prêt pour démonstration"
     },
     {
       "title": "Prédiction de la Consommation Énergétique",
       "period": "Depuis nov. 2024",
+      "company": "Projet IA & Data Science",
+      "role": "Data Scientist & ML Engineer",
       "technologies": ["Jupyter Notebook", "Python", "Pandas", "Scikit-learn", "Keras", "Tensorflow"],
-      "description": "Modèle prédictif de consommation énergétique",
-      "points": [
-        "Collecte, nettoyage et analyse de données météorologiques et démographiques",
-        "Modélisation statistique et prétraitement des données",
-        "Obtention d'un modèle prédictif avec une précision de 98%"
+      "description": "Modèle prédictif de consommation énergétique avec analyse de données météorologiques et démographiques pour optimisation énergétique.",
+      "highlights": [
+        "Collecte, nettoyage et analyse de données complexes",
+        "Modélisation statistique et prétraitement avancé",
+        "Modèle prédictif avec précision de 98%",
+        "Analyse de corrélations météo-démographiques",
+        "Optimisation des paramètres avec validation croisée"
+      ],
+      "technicalAchievements": [
+        "Préprocessing et feature engineering avancé",
+        "Sélection de modèles et hyperparameter tuning",
+        "Validation et évaluation des performances",
+        "Pipeline de ML automatisé et reproductible",
+        "Documentation technique complète"
+      ],
+      "businessValue": [
+        "Optimisation énergétique pour entreprises et collectivités",
+        "Réduction des coûts énergétiques",
+        "Planification stratégique basée sur la data",
+        "Conformité environnementale et RSE"
       ],
       "image": "https://cdn.leonardo.ai/users/9d28ff5b-5c8e-48d1-9c17-b4218d2876a9/generations/585b6e96-4aee-4457-bd83-3adbc5d5e026/segments/3:4:1/Flux_Dev_A_futuristic_and_modern_illustration_depicting_the_pr_2.jpeg",
-      "github": "https://github.com/Esabrina77/energy-prediction"
+      "github": "https://github.com/Esabrina77/energy-prediction",
+   "status": "Complété - Prêt pour démonstration"
     }
   ]
-} 
+}

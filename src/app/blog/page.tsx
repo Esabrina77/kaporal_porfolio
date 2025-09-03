@@ -1,15 +1,35 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/app/blog/blog.module.css';
-import blogData from '@/data/blog.json';
+
+interface BlogPost {
+  title: string;
+  date: string;
+  image: string;
+  content: string;
+  hashtags: string[];
+}
+
+interface BlogData {
+  posts: BlogPost[];
+}
+
+export const metadata: Metadata = {
+  title: 'Blog | Sabrina ELOUNDOU - Insights Tech & Entrepreneuriat',
+  description: 'Découvrez mes articles sur l\'innovation technologique, l\'entrepreneuriat, DevOps, IoT et les dernières tendances tech.',
+  keywords: ['blog tech', 'articles innovation', 'entrepreneuriat', 'DevOps', 'IoT', 'insights tech'],
+};
 
 export default function BlogPage() {
+  // Import direct des données pour éviter les erreurs côté serveur
+  const blogData = require('@/data/blog.json') as BlogData;
   return (
     <div className={styles.blogPage}>
       <div className={styles.container}>
         <h1 className={styles.pageTitle}>Blog</h1>
         <div className={styles.blogGrid}>
-          {blogData.posts.map((post, index) => (
+          {blogData.posts.map((post: BlogPost, index: number) => (
             <article key={index} className={styles.blogCard}>
               <div className={styles.imageContainer}>
                 <Image
@@ -27,7 +47,7 @@ export default function BlogPage() {
                   {post.content.substring(0, 150)}...
                 </p>
                 <div className={styles.hashtags}>
-                  {post.hashtags.slice(0, 3).map((tag, i) => (
+                  {post.hashtags.slice(0, 3).map((tag: string, i: number) => (
                     <span key={i} className={styles.hashtag}>#{tag}</span>
                   ))}
                 </div>

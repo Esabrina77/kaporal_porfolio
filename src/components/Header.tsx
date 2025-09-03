@@ -47,9 +47,12 @@ export default function Header() {
   const navItems = [
     { href: '/', label: 'Accueil' },
     { href: '/projects', label: 'Projets' },
+    { href: '/entrepreneurship', label: 'Entrepreneur' },
+    
     { href: '/experience', label: 'Expérience' },
-    { href: '/blog', label: 'Blog' },
+    
     { href: '/contact', label: 'Contact' },
+    { href: '/ugc', label: 'UGC' },
   ];
 
   return (

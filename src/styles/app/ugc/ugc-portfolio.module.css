@@ -1,0 +1,285 @@
+/* Page Magazine Style Vogue France */
+.magazinePage {
+  @apply min-h-screen;
+  background: var(--bg-gradient-onyx);
+  color: var(--white-alpha-80);
+  /* Compensation pour le padding-top global */
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+  .magazinePage {
+    margin-top: -80px;
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .magazinePage {
+    margin-top: -80px;
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .magazinePage {
+    margin-top: -70px;
+    padding-top: 90px;
+  }
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  padding-top: 60px;
+}
+
+/* Magazine Header */
+.magazineHeader {
+  @apply border-b;
+  border-color: var(--white-alpha-25);
+  /* S'assurer que le header est bien visible */
+  position: relative;
+  z-index: 10;
+}
+
+.topBar {
+  @apply flex items-center justify-between px-6 py-4;
+  border-bottom: 1px solid var(--white-alpha-25);
+}
+
+.menuButton {
+  @apply flex flex-col gap-1 cursor-pointer;
+}
+
+.menuButton span {
+  @apply w-6 h-0.5;
+  background-color: var(--white-alpha-80);
+}
+
+.magazineLogo {
+  @apply text-3xl font-serif font-bold tracking-wider;
+  color: var(--white-alpha-80);
+  font-family: 'Playfair Display', serif;
+}
+
+.headerActions {
+  @apply flex items-center gap-6;
+}
+
+.subscriptionLink {
+  @apply text-sm font-medium tracking-wider hover:underline;
+  color: var(--white-alpha-80);
+}
+
+.profileLink {
+  @apply text-sm font-medium tracking-wider hover:underline;
+  color: var(--white-alpha-80);
+}
+
+.searchButton {
+  @apply text-lg cursor-pointer;
+}
+
+/* Magazine Navigation */
+.magazineNav {
+  @apply px-6 py-4;
+}
+
+.navList {
+  @apply flex items-center justify-center gap-8;
+}
+
+.navList li a {
+  @apply text-sm font-medium tracking-wider uppercase hover:underline;
+  color: var(--white-alpha-80);
+  font-weight: 500;
+}
+
+/* Main Content */
+.mainContent {
+  @apply py-12;
+}
+
+/* Section Titles */
+.sectionTitle {
+  @apply text-2xl font-bold mb-8 text-center uppercase tracking-wider;
+  color: var(--white-alpha-80);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* Featured Articles Section */
+.featuredSection {
+  @apply mb-16;
+}
+
+.featuredGrid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8 px-6;
+}
+
+.articleCard {
+  background: var(--bg-gradient-onyx);
+  border: 1px solid var(--white-alpha-25);
+}
+
+.articleImage {
+  @apply relative overflow-hidden mb-4;
+  height: 500px;
+}
+
+.articleImg {
+  @apply w-full h-full object-cover;
+}
+
+.articleContent {
+  @apply px-2;
+}
+
+.articleCategory {
+  @apply text-xs font-bold uppercase tracking-wider mb-2 block;
+  color: var(--white-alpha-60);
+  letter-spacing: 0.1em;
+}
+
+.articleTitle {
+  @apply text-xl font-bold mb-3 leading-tight;
+  color: var(--white-alpha-80);
+  font-weight: 700;
+}
+
+.articleExcerpt {
+  @apply text-sm leading-relaxed mb-4;
+  color: var(--white-alpha-60);
+  line-height: 1.6;
+}
+
+.articleMeta {
+  @apply flex flex-col gap-1;
+}
+
+.articleAuthor {
+  @apply text-xs font-medium;
+  color: var(--white-alpha-40);
+}
+
+.articleDate {
+  @apply text-xs;
+  color: var(--white-alpha-40);
+}
+
+/* Latest News Grid */
+.latestNewsSection {
+  @apply mb-16;
+}
+
+.newsGrid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6;
+}
+
+.newsCard {
+  background: var(--bg-gradient-onyx);
+  border: 1px solid var(--white-alpha-25);
+}
+
+.newsImage {
+  @apply relative overflow-hidden mb-4;
+  height: 200px;
+}
+
+.newsImg {
+  @apply w-full h-full object-cover;
+}
+
+.newsContent {
+  @apply px-2;
+}
+
+.newsCategory {
+  @apply text-xs font-bold uppercase tracking-wider mb-2 block;
+  color: var(--white-alpha-60);
+  letter-spacing: 0.1em;
+}
+
+.newsTitle {
+  @apply text-sm font-bold mb-3 leading-tight;
+  color: var(--white-alpha-80);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.newsMeta {
+  @apply flex flex-col gap-1;
+}
+
+.newsAuthor {
+  @apply text-xs font-medium;
+  color: var(--white-alpha-40);
+}
+
+.newsDate {
+  @apply text-xs;
+  color: var(--white-alpha-40);
+}
+
+/* Magazine CTA */
+.magazineCTA {
+  @apply text-center py-16 px-6;
+  background: #f8f8f8;
+}
+
+.ctaContent {
+  @apply max-w-2xl mx-auto;
+}
+
+.ctaTitle {
+  @apply text-3xl font-bold mb-4;
+  color: black;
+  font-family: 'Playfair Display', serif;
+}
+
+.ctaDescription {
+  @apply text-lg mb-8 leading-relaxed;
+  color: #666;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.primaryButton, .secondaryButton {
+  @apply px-8 py-3 font-semibold transition-all duration-300 text-center tracking-wider;
+}
+
+.primaryButton {
+  @apply bg-black text-white hover:bg-gray-800;
+}
+
+.secondaryButton {
+  @apply border-2 border-black text-black hover:bg-black hover:text-white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .magazineLogo {
+    @apply text-2xl;
+  }
+  
+  .navList {
+    @apply flex-wrap gap-4;
+  }
+  
+  .featuredGrid {
+    @apply grid-cols-1;
+  }
+  
+  .newsGrid {
+    @apply grid-cols-1 sm:grid-cols-2;
+  }
+  
+  .ctaButtons {
+    @apply flex-col;
+  }
+}

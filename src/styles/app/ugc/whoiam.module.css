@@ -1,0 +1,295 @@
+/* Page Who I Am Style Vogue France */
+.whoiamPage {
+  @apply min-h-screen py-16 sm:py-24;
+  background: var(--bg-gradient-onyx);
+  color: var(--white-alpha-80);
+  /* Compensation pour le padding-top global */
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+  .whoiamPage {
+    margin-top: -80px;
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whoiamPage {
+    margin-top: -80px;
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whoiamPage {
+    margin-top: -70px;
+    padding-top: 90px;
+  }
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Hero Section */
+.hero {
+  @apply mb-20;
+}
+
+.heroContent {
+  @apply flex flex-col lg:flex-row items-center gap-12;
+}
+
+.heroImage {
+  @apply relative flex-shrink-0;
+}
+
+.profileImage {
+  @apply rounded-full border-4;
+  border-color: var(--orange-yellow-crayola);
+  width: 300px;
+  height: 300px;
+}
+
+.heroText {
+  @apply flex-1 text-center lg:text-left;
+}
+
+.heroTitle {
+  @apply text-4xl sm:text-5xl font-bold mb-4;
+  color: var(--white-alpha-80);
+  font-family: 'Playfair Display', serif;
+}
+
+.accent {
+  background: linear-gradient(45deg, var(--orange-yellow-crayola), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  @apply text-lg font-medium mb-6;
+  color: var(--white-alpha-60);
+}
+
+.heroDescription {
+  @apply text-lg leading-relaxed;
+  color: var(--white-alpha-60);
+  line-height: 1.6;
+}
+
+.heroDescription strong {
+  color: var(--white-alpha-80);
+  font-weight: 700;
+}
+
+/* Section Titles */
+.sectionTitle {
+  @apply text-3xl sm:text-4xl font-bold text-center mb-12;
+  color: var(--white-alpha-80);
+  font-family: 'Playfair Display', serif;
+}
+
+/* Story Section */
+.story {
+  @apply mb-20;
+}
+
+.storyContent {
+  @apply max-w-4xl mx-auto;
+}
+
+.storyText {
+  @apply text-lg leading-relaxed mb-6;
+  color: var(--white-alpha-60);
+  line-height: 1.6;
+}
+
+.storyText strong {
+  color: var(--white-alpha-80);
+  font-weight: 700;
+}
+
+/* Timeline Section */
+.timeline {
+  @apply mb-20;
+}
+
+.timelineContainer {
+  @apply max-w-4xl mx-auto;
+}
+
+.timelineItem {
+  @apply flex gap-8 mb-12 relative;
+}
+
+.timelineItem::after {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 60px;
+  width: 2px;
+  height: calc(100% + 3rem);
+  background: var(--white-alpha-25);
+}
+
+.timelineItem:last-child::after {
+  display: none;
+}
+
+.timelineYear {
+  @apply text-2xl font-bold px-4 py-2 rounded-lg flex-shrink-0;
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  width: 80px;
+  text-align: center;
+}
+
+.timelineContent {
+  @apply flex-1;
+}
+
+.timelineTitle {
+  @apply text-xl font-bold mb-2;
+  color: var(--white-alpha-80);
+}
+
+.timelineDescription {
+  @apply leading-relaxed;
+  color: var(--white-alpha-60);
+}
+
+/* Values Section */
+.values {
+  @apply mb-20;
+}
+
+.valuesGrid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.valueCard {
+  @apply text-center p-6 transition-all duration-300 hover:shadow-lg;
+  background: var(--bg-gradient-onyx);
+  border: 1px solid var(--white-alpha-25);
+}
+
+.valueIcon {
+  @apply text-4xl mb-4;
+}
+
+.valueTitle {
+  @apply text-xl font-bold mb-3;
+  color: var(--white-alpha-80);
+}
+
+.valueDescription {
+  @apply text-sm leading-relaxed;
+  color: #666;
+}
+
+/* Behind the Scenes */
+.behind {
+  @apply mb-20;
+}
+
+.behindGrid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.behindItem {
+  @apply transition-all duration-300 hover:shadow-lg;
+  background: white;
+  border: 1px solid #f0f0f0;
+}
+
+.behindImage {
+  @apply w-full h-48 object-cover;
+}
+
+.behindTitle {
+  @apply text-xl font-bold mb-2 px-6 pt-6;
+  color: black;
+}
+
+.behindDescription {
+  @apply px-6 pb-6 leading-relaxed;
+  color: #666;
+}
+
+/* CTA Section */
+.cta {
+  @apply text-center py-16;
+  background: #f8f8f8;
+}
+
+.ctaContent {
+  @apply max-w-2xl mx-auto;
+}
+
+.ctaTitle {
+  @apply text-3xl font-bold mb-4;
+  color: black;
+  font-family: 'Playfair Display', serif;
+}
+
+.ctaDescription {
+  @apply text-lg mb-8;
+  color: #666;
+}
+
+.ctaButtons {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.primaryButton, .secondaryButton {
+  @apply px-8 py-3 font-semibold transition-all duration-300 text-center;
+}
+
+.primaryButton {
+  @apply bg-black text-white hover:bg-gray-800;
+}
+
+.secondaryButton {
+  @apply border-2 border-black text-black hover:bg-black hover:text-white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroContent {
+    @apply flex-col text-center;
+  }
+  
+  .profileImage {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .heroTitle {
+    @apply text-3xl;
+  }
+  
+  .timelineItem {
+    @apply flex-col gap-4;
+  }
+  
+  .timelineItem::after {
+    display: none;
+  }
+  
+  .timelineYear {
+    @apply self-start;
+  }
+  
+  .valuesGrid {
+    @apply grid-cols-1;
+  }
+  
+  .behindGrid {
+    @apply grid-cols-1;
+  }
+}

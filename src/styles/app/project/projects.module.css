@@ -1,5 +1,10 @@
+/* Page Projects */
 .projectsPage {
-  @apply py-16 sm:py-24;
+  @apply min-h-screen py-16 sm:py-24;
+}
+
+.pageContainer {
+  @apply pt-32 pb-16 sm:pb-24;
 }
 
 .container {
@@ -14,7 +19,7 @@
 }
 
 .projectsGrid {
-  @apply grid gap-8 sm:grid-cols-2;
+  @apply grid gap-8 sm:grid-cols-1 lg:grid-cols-2;
 }
 
 .projectCard {
@@ -22,62 +27,141 @@
          border border-solid border-[var(--white-alpha-25)]
          rounded-[20px]
          p-6 sm:p-8
-         transition-transform duration-300
-         hover:transform hover:scale-[1.02];
+         transition-all duration-300
+         hover:transform hover:scale-[1.02]
+         hover:border-[var(--orange-yellow-crayola)];
   backdrop-filter: blur(10px);
 }
 
 .projectImage {
-  @apply relative w-full h-48 mb-6 rounded-lg overflow-hidden;
+  @apply relative w-full h-64 mb-6 rounded-lg overflow-hidden;
 }
 
 .projectImage img {
-  @apply w-full h-full object-cover;
+  @apply w-full h-full;
+}
+
+/* Badge de statut */
+.statusBadge {
+  @apply absolute top-3 right-3;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.statusText {
+  @apply text-xs font-medium text-white;
+}
+
+.projectHeader {
+  @apply flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4;
 }
 
 .projectTitle {
-  @apply text-2xl font-bold mb-2;
+  @apply text-2xl font-bold;
   color: var(--orange-yellow-crayola);
 }
 
+.companyBadge {
+  @apply text-xs px-3 py-1 rounded-full bg-[var(--orange-yellow-crayola)] text-[var(--smoky-black)] font-medium;
+  align-self: flex-start;
+}
+
 .projectPeriod {
-  @apply text-sm mb-4;
+  @apply text-sm mb-3;
   color: var(--white-alpha-40);
 }
 
+.projectRole {
+  @apply text-sm mb-4 font-medium;
+  color: var(--white-alpha-60);
+}
+
 .technologies {
-  @apply flex flex-wrap gap-2 mb-4;
+  @apply flex flex-wrap gap-2 mb-6;
 }
 
 .tech {
   @apply text-xs px-3 py-1 rounded-full;
   background: var(--white-alpha-25);
+  color: var(--white-alpha-80);
 }
 
 .projectDescription {
-  @apply mb-4;
-  color: var(--white-alpha-40);
+  @apply mb-6 text-[var(--white-alpha-40)] leading-relaxed;
 }
 
-.projectPoints {
-  @apply space-y-2 mb-6 list-disc list-inside;
-  color: var(--white-alpha-40);
+.projectSection {
+  @apply mb-6;
 }
 
-.projectLinks {
-  @apply flex gap-4;
-}
-
-.projectLink {
-  @apply inline-flex items-center gap-2
-         px-4 py-2 rounded-full
-         text-sm font-medium
-         transition-colors duration-300;
-  background: var(--white-alpha-25);
+.sectionTitle {
+  @apply text-sm font-semibold mb-3;
   color: var(--orange-yellow-crayola);
 }
 
-.projectLink:hover {
-  background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
-} 
+.projectPoints {
+  @apply space-y-2 mb-6 list-none;
+}
+
+.projectPoints li {
+  @apply text-sm leading-relaxed;
+  color: var(--white-alpha-60);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.projectPoints li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--orange-yellow-crayola);
+  font-weight: bold;
+}
+
+.projectLinks {
+  @apply flex gap-3 mt-6;
+}
+
+.projectLink {
+  @apply flex items-center gap-2
+         text-sm px-4 py-2 rounded-lg
+         bg-[var(--white-alpha-10)] border border-[var(--white-alpha-25)]
+         transition-all duration-300
+         hover:bg-[var(--orange-yellow-crayola)] hover:text-[var(--smoky-black)] hover:border-[var(--orange-yellow-crayola)];
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projectsPage {
+    @apply  sm:py-24;
+  }
+
+  .pageContainer {
+    padding-top: 0px;
+  }
+  .projectsGrid {
+    @apply grid-cols-1;
+  }
+  
+  .projectHeader {
+    @apply flex-col;
+  }
+  
+  .companyBadge {
+    align-self: flex-start;
+  }
+  
+  .projectLinks {
+    @apply flex-col;
+  }
+  
+  .projectLink {
+    @apply text-center justify-center;
+  }
+  
+  .pageTitle {
+    @apply text-3xl;
+  }
+}

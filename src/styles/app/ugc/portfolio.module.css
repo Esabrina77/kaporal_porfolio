@@ -1,0 +1,225 @@
+/* Page Portfolio Mode Style Vogue France */
+.portfolioPage {
+  @apply min-h-screen py-16 sm:py-24;
+  background: var(--bg-gradient-onyx);
+  color: var(--white-alpha-80);
+  /* Compensation pour le padding-top global */
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+  .portfolioPage {
+    margin-top: -80px;
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolioPage {
+    margin-top: -80px;
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolioPage {
+    margin-top: -70px;
+    padding-top: 90px;
+  }
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Header */
+.header {
+  @apply text-center mb-12;
+}
+
+.backLink {
+  @apply inline-flex items-center text-sm font-medium mb-6 transition-colors duration-300;
+  color: var(--white-alpha-60);
+}
+
+.backLink:hover {
+  color: var(--white-alpha-80);
+}
+
+.pageTitle {
+  @apply text-4xl sm:text-5xl font-bold mb-4;
+  color: var(--white-alpha-80);
+  font-family: 'Playfair Display', serif;
+}
+
+.pageDescription {
+  @apply text-lg max-w-2xl mx-auto;
+  color: var(--white-alpha-60);
+}
+
+/* Filters */
+.filters {
+  @apply mb-12;
+}
+
+.filterTabs {
+  @apply flex flex-wrap justify-center gap-4;
+}
+
+.filterTab {
+  @apply px-6 py-2 text-sm font-medium transition-all duration-300;
+  background: var(--bg-gradient-onyx);
+  color: var(--white-alpha-60);
+  border: 1px solid var(--white-alpha-25);
+}
+
+.filterTab.active,
+.filterTab:hover {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  border-color: var(--orange-yellow-crayola);
+}
+
+/* Portfolio Grid */
+.portfolio {
+  @apply mb-20;
+}
+
+.portfolioGrid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.portfolioItem {
+  @apply transition-all duration-300 hover:shadow-lg;
+  background: var(--bg-gradient-onyx);
+  border: 1px solid var(--white-alpha-25);
+}
+
+.imageContainer {
+  @apply relative overflow-hidden;
+  height: 400px;
+}
+
+.portfolioImage {
+  @apply w-full h-full object-cover transition-transform duration-300;
+}
+
+.overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4;
+}
+
+.overlayContent {
+  @apply flex flex-col gap-2;
+}
+
+.type {
+  @apply px-3 py-1 rounded-full text-xs font-medium;
+  background: var(--white-alpha-80);
+  color: var(--smoky-black);
+  width: fit-content;
+}
+
+.category {
+  @apply px-3 py-1 rounded-full text-xs font-medium;
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  width: fit-content;
+}
+
+.itemContent {
+  @apply p-6;
+}
+
+.itemTitle {
+  @apply text-xl font-bold mb-3;
+  color: var(--white-alpha-80);
+  font-weight: 700;
+}
+
+.itemDescription {
+  @apply mb-4 leading-relaxed text-sm;
+  color: var(--white-alpha-60);
+  line-height: 1.6;
+}
+
+.credits {
+  @apply mb-4 p-3;
+  background: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-25);
+}
+
+.creditsLabel {
+  @apply text-xs font-semibold;
+  color: var(--white-alpha-40);
+}
+
+.creditsValue {
+  @apply text-sm font-medium;
+  color: var(--white-alpha-80);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.tags {
+  @apply flex flex-wrap gap-2;
+}
+
+.tag {
+  @apply px-2 py-1 rounded-full text-xs;
+  background: var(--white-alpha-10);
+  color: var(--white-alpha-60);
+}
+
+/* CTA Section */
+.cta {
+  @apply text-center py-16;
+  background: var(--bg-gradient-onyx);
+  border: 1px solid var(--white-alpha-25);
+}
+
+.ctaContent {
+  @apply max-w-2xl mx-auto;
+}
+
+.ctaTitle {
+  @apply text-3xl font-bold mb-4;
+  color: var(--white-alpha-80);
+  font-family: 'Playfair Display', serif;
+}
+
+.ctaDescription {
+  @apply text-lg mb-8;
+  color: var(--white-alpha-60);
+}
+
+.ctaButton {
+  @apply inline-block px-8 py-3 font-semibold transition-all duration-300;
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+}
+
+.ctaButton:hover {
+  background: var(--white-alpha-80);
+  color: var(--smoky-black);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageTitle {
+    @apply text-3xl;
+  }
+  
+  .filterTabs {
+    @apply flex-col items-center;
+  }
+  
+  .portfolioGrid {
+    @apply grid-cols-1;
+  }
+  
+  .imageContainer {
+    height: 300px;
+  }
+}

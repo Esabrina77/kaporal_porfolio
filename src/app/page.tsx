@@ -15,6 +15,48 @@ export default function Home() {
           <div className={styles.content}>
             <Hero />
             
+            {/* Section Entrepreneuriat */}
+            <section className={styles.entrepreneurshipSection}>
+              <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>🚀 Mon Aventure Entrepreneuriale</h2>
+                <Link href="/entrepreneurship" className={styles.seeMoreLink}>
+                  En savoir plus
+                </Link>
+              </div>
+              <div className={styles.entrepreneurshipCard}>
+                <div className={styles.entrepreneurshipContent}>
+                  <h3 className={styles.companyName}>Kaporelo</h3>
+                  <p className={styles.companyDescription}>
+                    Ma startup tech innovante spécialisée dans les solutions numériques disruptives. 
+                    J'ai créé <strong>Kawepla</strong>, une plateforme révolutionnaire de wedding planning 
+                    qui combine gestion d'événements et marketplace de prestataires.
+                  </p>
+                  <div className={styles.entrepreneurshipStats}>
+                    <div className={styles.stat}>
+                      <span className={styles.statNumber}>100%</span>
+                      <span className={styles.statLabel}>Développé en interne</span>
+                    </div>
+                    <div className={styles.stat}>
+                      <span className={styles.statNumber}>5+</span>
+                      <span className={styles.statLabel}>Technologies modernes</span>
+                    </div>
+                    <div className={styles.stat}>
+                      <span className={styles.statNumber}>∞</span>
+                      <span className={styles.statLabel}>Scalabilité</span>
+                    </div>
+                  </div>
+                  <div className={styles.entrepreneurshipLinks}>
+                    <Link href="/entrepreneurship" className={styles.primaryLink}>
+                      Découvrir Kaporelo
+                    </Link>
+                    <Link href="https://kawepla.kaporelo.com" className={styles.secondaryLink} target="_blank">
+                      Voir Kawepla
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
             <section className={styles.recentSection}>
               <div className={styles.sectionHeader}>
                 <h2 className={styles.sectionTitle}>Expériences Récentes</h2>

@@ -1,13 +1,20 @@
 User-agent: *
 Allow: /
 
-# Optimisation pour les crawlers
-Crawl-delay: 10
-
 # Sitemap
-Sitemap: https://kaporelo.com/sitemap.xml
+Sitemap: https://www.kaporelo.com/sitemap.xml
 
-# Interdire l'accès aux pages d'erreur et administratives
-Disallow: /404
-Disallow: /500
-Disallow: /api/ 
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /api/
+
+# Allow important pages
+Allow: /projects
+Allow: /experience
+Allow: /skills
+Allow: /education
+Allow: /entrepreneurship
+Allow: /contact 

@@ -4,15 +4,14 @@
 
 :root {
   /* Colors */
-  --bg-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
-  );
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
+
+  --orange-yellow-crayola: hsl(45, 98%, 68%);
   --smoky-black: hsla(0, 0%, 0%, 0.862);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
   --white-alpha-25: hsla(0, 0%, 100%, 0.25);
   --white-alpha-40: hsla(0, 0%, 100%, 0.4);
+  --white-alpha-60: hsla(0, 0%, 100%, 0.6);
+  --white-alpha-80: hsla(0, 0%, 100%, 0.8);
   
   /* Typography */
   --ff-poppins: var(--font-poppins);
@@ -21,12 +20,15 @@
 [data-theme='light'] {
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 95%) 3%, 
-    hsl(0, 0%, 90%) 97%
+    hsl(87, 100%, 92%) 3%, 
+    hsl(0, 0%, 100%) 97%
   );
-  --smoky-black: hsla(158, 69%, 35%, 0.627);
+  --smoky-black:  hsla(342, 34%, 39%, 0.7)  ;
+  --white-alpha-10: hsla(0, 0%, 0%, 0.1);
   --white-alpha-25: hsla(0, 0%, 0%, 0.25);
   --white-alpha-40: hsla(0, 0%, 0%, 0.4);
+  --white-alpha-60: hsla(0, 0%, 0%, 0.6);
+  --white-alpha-80: hsla(0, 0%, 0%, 0.8);
 }
 
 [data-theme='dark'] {
@@ -36,8 +38,11 @@
     hsl(0, 0%, 19%) 97%
   );
   --smoky-black: hsla(0, 0%, 0%, 0.862);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
   --white-alpha-25: hsla(0, 0%, 100%, 0.25);
   --white-alpha-40: hsla(0, 0%, 100%, 0.4);
+  --white-alpha-60: hsla(0, 0%, 100%, 0.6);
+  --white-alpha-80: hsla(0, 0%, 100%, 0.8);
 }
 
 /* Base styles */
