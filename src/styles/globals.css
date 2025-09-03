@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  /* Colors */
-
+  /* Colors - Dark theme by default */
   --orange-yellow-crayola: hsl(45, 98%, 68%);
   --smoky-black: hsla(0, 0%, 0%, 0.862);
   --white-alpha-10: hsla(0, 0%, 100%, 0.1);
@@ -14,8 +12,12 @@
   --white-alpha-60: hsla(0, 0%, 100%, 0.6);
   --white-alpha-80: hsla(0, 0%, 100%, 0.8);
   
-  /* Typography */
-  --ff-montserrat: var(--font-montserrat);
+  /* Default dark theme */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(240, 1%, 25%) 3%, 
+    hsl(0, 0%, 19%) 97%
+  );
 }
 
 [data-theme='light'] {
@@ -24,26 +26,12 @@
     hsl(87, 100%, 92%) 3%, 
     hsl(0, 0%, 100%) 97%
   );
-  --smoky-black:  hsla(176, 93%, 23%, 0.733)  ;
+  --smoky-black: hsla(176, 93%, 23%, 0.733);
   --white-alpha-10: hsla(0, 0%, 0%, 0.1);
   --white-alpha-25: hsla(0, 0%, 0%, 0.25);
   --white-alpha-40: hsla(0, 0%, 0%, 0.4);
   --white-alpha-60: hsla(0, 0%, 0%, 0.6);
   --white-alpha-80: hsla(0, 0%, 0%, 0.8);
-}
-
-[data-theme='dark'] {
-  --bg-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
-  );
-  --smoky-black: hsla(0, 0%, 0%, 0.862);
-  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
-  --white-alpha-25: hsla(0, 0%, 100%, 0.25);
-  --white-alpha-40: hsla(0, 0%, 100%, 0.4);
-  --white-alpha-60: hsla(0, 0%, 100%, 0.6);
-  --white-alpha-80: hsla(0, 0%, 100%, 0.8);
 }
 
 /* Base styles */

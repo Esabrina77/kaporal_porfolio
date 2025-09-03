@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sabrina ELOUNDOU - Architecte de Solutions Numériques',
-    description: 'Fondatrice de Kaporelo et innovatrice tech. Expert DevOps, IoT et développement full-stack.',
+    description: 'Fondatrice de Kaporelo et innovatrice tech.  DevOps, IoT et développement full-stack.',
     images: ['/images/kaporelo.jpg'],
   },
   verification: {
@@ -91,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
+    <html lang="fr" data-theme="dark">
       <body className={montserrat.className}>
         <Header />
         <main>
