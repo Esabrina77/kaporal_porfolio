@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Sabrina ELOUNDOU - Architecte de Solutions Numériques & Entrepreneuse Tech',
-  description: 'Fondatrice de Kaporelo et créatrice de Kawepla. Expert DevOps, IoT et développement full-stack. Transforme des défis complexes en solutions technologiques innovantes.',
+  description: 'Fondatrice de Kaporelo et créatrice de Kawepla. DevOps, IoT et développement full-stack. Transforme des défis complexes en solutions technologiques innovantes.',
   keywords: [
     'Sabrina Eloundou',
     'Développeuse Full-Stack',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Sabrina ELOUNDOU - Architecte de Solutions Numériques',
-    description: 'Fondatrice de Kaporelo et innovatrice tech. Expert DevOps, IoT et développement full-stack.',
+    description: 'Fondatrice de Kaporelo et innovatrice tech.  DevOps, IoT et développement full-stack.',
     url: 'https://www.kaporelo.com',
     siteName: 'Portfolio Sabrina ELOUNDOU',
     type: 'website',

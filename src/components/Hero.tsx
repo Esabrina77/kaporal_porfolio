@@ -18,7 +18,7 @@ export default function Hero() {
  *
         
         <h2 className={styles.heading}>
-          Architecte de Solutions Numériques | Entrepreneuse Tech | Expert DevOps & IoT
+          Architecte de Solutions Numériques | Entrepreneuse Tech | DevOps & IoT
         </h2>
 
         {/* Description Stratégique */}

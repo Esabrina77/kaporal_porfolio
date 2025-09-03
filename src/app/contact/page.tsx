@@ -4,7 +4,7 @@ import styles from '@/styles/app/home/page.module.css';
 
 export const metadata: Metadata = {
   title: 'Contact | Sabrina ELOUNDOU - Collaborons sur vos Projets Tech',
-  description: 'Contactez-moi pour discuter de vos projets innovants, opportunités entrepreneuriales ou collaborations techniques. Fondatrice de Kaporelo, experte DevOps & IoT.',
+  description: 'Contactez-moi pour discuter de vos projets innovants, opportunités entrepreneuriales ou collaborations techniques. Fondatrice de Kaporelo,  DevOps & IoT.',
   keywords: ['contact', 'collaboration', 'projets tech', 'opportunités', 'Kaporelo', 'consulting tech'],
 };
 

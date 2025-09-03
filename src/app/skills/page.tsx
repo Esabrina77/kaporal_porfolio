@@ -4,7 +4,7 @@ import styles from '@/styles/app/skills/skills.module.css';
 import profileData from '@/data/profile.json';
 
 export const metadata: Metadata = {
-  title: 'Compétences | Sabrina ELOUNDOU - Expert DevOps, IoT & Full-Stack',
+  title: 'Compétences | Sabrina ELOUNDOU -  DevOps, IoT & Full-Stack',
   description: 'Découvrez mes compétences techniques avancées : développement full-stack, DevOps, IoT, AR/VR, Data Science et leadership entrepreneurial.',
   keywords: ['compétences tech', 'DevOps', 'IoT', 'Next.js', 'Node.js', 'PostgreSQL', 'Docker', 'ESP8266', 'MQTT', 'Three.js'],
 };
