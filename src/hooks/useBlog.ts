@@ -4,12 +4,10 @@ import blogData from '@/data/blog.json';
 
 export interface BlogPost {
   title: string;
-  excerpt: string;
   date: string;
+  content: string;
+  hashtags: string[];
   image: string;
-  slug: string;
-  content?: string;
-  tags?: string[];
 }
 
 export function useBlog(): BlogPost[] {
@@ -25,7 +23,7 @@ export function useRecentBlogPosts(limit: number = 3): BlogPost[] {
   return posts.slice(0, limit);
 }
 
-export function useBlogPost(slug: string): BlogPost | undefined {
+export function useBlogPost(title: string): BlogPost | undefined {
   const posts = useBlog();
-  return posts.find(post => post.slug === slug);
+  return posts.find(post => post.title === title);
 }

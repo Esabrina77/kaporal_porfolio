@@ -28,8 +28,8 @@ export default function Home() {
                   <h3 className={styles.companyName}>Kaporelo</h3>
                   <p className={styles.companyDescription}>
                     Ma startup tech innovante spécialisée dans les solutions numériques disruptives. 
-                    J'ai créé <strong>Kawepla</strong>, une plateforme révolutionnaire de wedding planning 
-                    qui combine gestion d'événements et marketplace de prestataires.
+                    J&apos;ai créé <strong>Kawepla</strong>, une plateforme révolutionnaire de wedding planning 
+                    qui combine gestion d&apos;événements et marketplace de prestataires.
                   </p>
                   <div className={styles.entrepreneurshipStats}>
                     <div className={styles.stat}>

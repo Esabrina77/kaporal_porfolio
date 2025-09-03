@@ -1,5 +1,29 @@
 import { Metadata } from 'next';
 import styles from '@/styles/app/experience/experience.module.css';
+import profileData from '@/data/profile.json';
+
+// TypeScript interfaces
+interface ExperienceItem {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+  technologies: string[];
+  achievements: string[];
+}
+
+interface EntrepreneurialData {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  achievements: string[];
+  kawepla?: {
+    name: string;
+    description: string;
+  };
+}
 
 export const metadata: Metadata = {
   title: 'Expérience | Sabrina ELOUNDOU - Parcours Entrepreneurial & Technique',
@@ -8,10 +32,9 @@ export const metadata: Metadata = {
 };
 
 export default function ExperiencePage() {
-  // Import direct des données pour éviter les erreurs côté serveur
-  const profileData = require('@/data/profile.json');
-  const experience = profileData.experience || [];
-  const entrepreneurial = profileData.entrepreneurial;
+
+  const experience = (profileData.experience || []) as ExperienceItem[];
+  const entrepreneurial = profileData.entrepreneurial as EntrepreneurialData;
 
   return (
     <div className={`${styles.experiencePage} ${styles.pageContainer}`}>
@@ -32,7 +55,7 @@ export default function ExperiencePage() {
               <p className={styles.description}>{entrepreneurial.description}</p>
               
               <ul className={styles.achievements}>
-                {entrepreneurial.achievements.map((achievement, i) => (
+                {entrepreneurial.achievements.map((achievement: string, i: number) => (
                   <li key={i}>{achievement}</li>
                 ))}
               </ul>
@@ -42,8 +65,8 @@ export default function ExperiencePage() {
                   <h4 className={styles.projectTitle}>🌟 {entrepreneurial.kawepla.name}</h4>
                   <p className={styles.projectDescription}>{entrepreneurial.kawepla.description}</p>
                   <div className={styles.technologies}>
-                    {entrepreneurial.kawepla.technologies.map((tech) => (
-                      <span key={tech} className={styles.tech}>{tech}</span>
+                    {entrepreneurial.achievements.map((achievement: string, i: number) => (
+                      <span key={i} className={styles.tech}>{achievement}</span>
                     ))}
                   </div>
                 </div>
@@ -56,7 +79,7 @@ export default function ExperiencePage() {
         <div className={styles.professionalSection}>
           <h2 className={styles.sectionTitle}>💼 Expérience Professionnelle</h2>
           <div className={styles.timeline}>
-            {experience.map((exp, index) => (
+            {experience.map((exp: ExperienceItem, index: number) => (
               <div key={index} className={styles.timelineItem}>
                 <div className={styles.timelineHeader}>
                   <h3 className={styles.timelineTitle}>{exp.title}</h3>
@@ -67,13 +90,13 @@ export default function ExperiencePage() {
                 </div>
                 
                 <div className={styles.technologies}>
-                  {exp.technologies.map((tech) => (
+                  {exp.technologies.map((tech: string) => (
                     <span key={tech} className={styles.tech}>{tech}</span>
                   ))}
                 </div>
                 
                 <ul className={styles.achievements}>
-                  {exp.achievements.map((achievement, i) => (
+                  {exp.achievements.map((achievement: string, i: number) => (
                     <li key={i}>{achievement}</li>
                   ))}
                 </ul>

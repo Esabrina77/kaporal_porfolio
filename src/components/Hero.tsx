@@ -24,7 +24,7 @@ export default function Hero() {
         {/* Description Stratégique */}
         <p className={styles.description}>
           Je transforme des défis complexes en solutions technologiques innovantes. 
-          <strong>Fondatrice de Kaporelo</strong> et créatrice de <strong>Kawepla</strong>, 
+          <strong>Fondatrice de Kaporelo</strong> et créatrice de <strong>Kawepla</strong>,
           je combine expertise technique avancée et vision entrepreneuriale pour créer des 
           plateformes qui révolutionnent leur secteur.
         </p>
@@ -34,7 +34,7 @@ export default function Hero() {
         <div className={styles.stats}>
           <div className={styles.stat}>
             <span className={styles.statNumber}>3+</span>
-            <span className={styles.statLabel}>Années d'innovation</span>
+            <span className={styles.statLabel}>Années d&apos;innovation</span>
           </div>
           <div className={styles.stat}>
             <span className={styles.statNumber}>10+</span>

@@ -1,7 +1,7 @@
 "use client";
 
 import styles from '@/styles/components/Contact.module.css';
-import { FaEnvelope, FaPhone, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function ContactForm() {
   const contactInfo = {

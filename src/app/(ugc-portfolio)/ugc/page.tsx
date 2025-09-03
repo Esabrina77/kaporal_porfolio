@@ -167,15 +167,15 @@ export default function UGCPortfolioPage() {
             <div className={styles.ctaContent}>
               <h2 className={styles.ctaTitle}>Votre Magazine de Mode Premium</h2>
               <p className={styles.ctaDescription}>
-                Découvrez l'élégance française à travers nos pages. Mode, beauté, lifestyle et culture 
-                dans un magazine qui célèbre l'art de vivre à la française.
+                Découvrez l&apos;élégance française à travers nos pages. Mode, beauté, lifestyle et culture 
+                dans un magazine qui célèbre l&apos;art de vivre à la française.
               </p>
               <div className={styles.ctaButtons}>
                 <Link href="/whoiam" className={styles.primaryButton}>
                   Découvrir Mon Univers
                 </Link>
                 <Link href="/ugc/portfolio" className={styles.secondaryButton}>
-                  Voir Plus d'Articles
+                  Voir Plus d&apos;Articles
                 </Link>
               </div>
             </div>

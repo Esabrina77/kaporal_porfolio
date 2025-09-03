@@ -85,7 +85,7 @@ export default function UGCPortfolioPage() {
           </Link>
           <h1 className={styles.pageTitle}>Portfolio Mode</h1>
           <p className={styles.pageDescription}>
-            Découvrez mes créations mode, éditoriaux et shootings dans l'esprit des magazines de mode premium français.
+            Chaque photo raconte une histoire, chaque look exprime une personnalité
           </p>
         </section>
 
@@ -146,7 +146,7 @@ export default function UGCPortfolioPage() {
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaTitle}>Votre Magazine de Mode Premium</h2>
             <p className={styles.ctaDescription}>
-              Découvrez l'élégance française à travers mes créations et éditoriaux.
+              L&apos;élégance n&apos;a pas de limites, la créativité n&apos;a pas de frontières
             </p>
             <Link href="/contact" className={styles.ctaButton}>
               Collaborer Ensemble

@@ -73,16 +73,41 @@ export default function WhoIAmPage() {
             </div>
             <div className={styles.heroText}>
               <h1 className={styles.heroTitle}>
-                Salut, moi c'est 
+                Salut, moi c&apos;est 
                 <span className={styles.accent}> Sabrina</span>
               </h1>
               <p className={styles.heroSubtitle}>
                 Rédactrice en Chef • Créatrice de Mode • Tech Entrepreneur
               </p>
-              <p className={styles.heroDescription}>
-                Je suis une passionnée de technologie et de mode, fondatrice de <strong>Kaporelo</strong> 
-                et créatrice de <strong>SABRINA MAGAZINE</strong>. Mon univers mélange innovation technique et 
-                esthétique raffinée, dans l'esprit des magazines de mode premium français.
+              <p className={styles.personalDescription}>
+                Je suis une créatrice passionnée par l&apos;art de la mode et l&apos;expression de la beauté
+              </p>
+              <p className={styles.personalDescription}>
+                Chaque création raconte une histoire, chaque look exprime une personnalité unique
+              </p>
+              <p className={styles.personalDescription}>
+                L&apos;élégance n&apos;a pas de limites, la créativité n&apos;a pas de frontières
+              </p>
+              <p className={styles.personalDescription}>
+                Découvrez l&apos;univers de la mode à travers mes yeux et ma vision créative
+              </p>
+              <p className={styles.personalDescription}>
+                Chaque photo est une œuvre d&apos;art, chaque style une expression de liberté
+              </p>
+              <p className={styles.personalDescription}>
+                L&apos;élégance française rencontre l&apos;innovation moderne dans chaque création
+              </p>
+              <p className={styles.personalDescription}>
+                Chaque détail compte, chaque accessoire raconte une histoire
+              </p>
+              <p className={styles.personalDescription}>
+                L&apos;art de la mode est l&apos;art de l&apos;expression personnelle
+              </p>
+              <p className={styles.personalDescription}>
+                Chaque création est unique, chaque style est authentique
+              </p>
+              <p className={styles.personalDescription}>
+                L&apos;élégance n&apos;a pas d&apos;âge, la beauté n&apos;a pas de frontières
               </p>
             </div>
           </div>
@@ -93,19 +118,19 @@ export default function WhoIAmPage() {
           <h2 className={styles.sectionTitle}>Mon Histoire</h2>
           <div className={styles.storyContent}>
             <p className={styles.storyText}>
-              Mon parcours unique commence dans le monde de la tech, où j'ai développé une expertise 
-              en développement full-stack, DevOps et IoT. Parallèlement, j'ai découvert ma passion 
-              pour la création de contenu mode et lifestyle, particulièrement dans l'univers de la beauté 
-              et de l'élégance française.
+              Mon parcours unique commence dans le monde de la tech, où j&apos;ai développé une expertise 
+              en développement full-stack, DevOps et IoT. Parallèlement, j&apos;ai découvert ma passion 
+              pour la création de contenu mode et lifestyle, particulièrement dans l&apos;univers de la beauté 
+              et de l&apos;élégance française.
             </p>
             <p className={styles.storyText}>
-              Cette double compétence m'a permis de créer <strong>Kaporelo</strong>, ma startup tech, 
+              Cette double compétence m&apos;a permis de créer <strong>Kaporelo</strong>, ma startup tech, 
               tout en développant <strong>SABRINA MAGAZINE</strong>, mon magazine de mode premium. 
-              Je collabore avec des marques et créateurs qui partagent mes valeurs d'élégance et d'excellence.
+              Je collabore avec des marques et créateurs qui partagent mes valeurs d&apos;élégance et d&apos;excellence.
             </p>
             <p className={styles.storyText}>
-              Aujourd'hui, je continue d'innover à l'intersection de la technologie et de la créativité, 
-              créant du contenu qui inspire et des solutions qui transforment l'industrie de la mode.
+              Aujourd&apos;hui, je continue d&apos;innover à l&apos;intersection de la technologie et de la créativité, 
+              créant du contenu qui inspire et des solutions qui transforment l&apos;industrie de la mode.
             </p>
           </div>
         </section>
@@ -167,18 +192,18 @@ export default function WhoIAmPage() {
               />
               <h3 className={styles.behindTitle}>Ma Routine Mode</h3>
               <p className={styles.behindDescription}>
-                Style minimaliste et élégance naturelle, dans l'esprit des magazines premium français.
+                Style minimaliste et élégance naturelle, dans l&apos;esprit des magazines premium français.
               </p>
             </div>
           </div>
         </section>
-
+       
         {/* CTA */}
         <section className={styles.cta}>
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaTitle}>Connectons-nous</h2>
             <p className={styles.ctaDescription}>
-              Envie de collaborer ou simplement d'échanger ? Je serais ravie de vous rencontrer !
+              Envie de collaborer ou simplement d&apos;échanger ? Je serais ravie de vous rencontrer !
             </p>
             <div className={styles.ctaButtons}>
               <Link href="/contact" className={styles.primaryButton}>

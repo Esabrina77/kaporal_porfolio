@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/app/entrepreneurship/entrepreneurship.module.css';
+// import  entrepreneurialData from '@/data/profile.json';
+
 
 export const metadata: Metadata = {
   title: 'Entrepreneurship | Sabrina ELOUNDOU - Fondatrice Kaporelo',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function Entrepreneurship() {
-  const entrepreneurialData = require('@/data/profile.json').entrepreneurial;
+
 
   return (
     <div className={`${styles.entrepreneurshipPage} ${styles.pageContainer}`}>
@@ -34,7 +35,7 @@ export default function Entrepreneurship() {
             <div className={styles.visionMissionValues}>
               <div className={styles.valueCard}>
                 <h3 className={styles.valueTitle}>Vision</h3>
-                <p className={styles.valueText}>Révolutionner les industries traditionnelles avec des solutions numériques innovantes et scalables, visant l'international.</p>
+                <p className={styles.valueText}>Révolutionner les industries traditionnelles avec des solutions numériques innovantes et scalables, visant l&apos;international.</p>
               </div>
               <div className={styles.valueCard}>
                 <h3 className={styles.valueTitle}>Mission</h3>
@@ -55,7 +56,7 @@ export default function Entrepreneurship() {
               <h3 className={styles.subTitle}>Mes Accomplissements chez Kaporelo :</h3>
               <ul className={styles.achievementsList}>
                 <li><strong>Création et pilotage de la vision stratégique :</strong> Définition de la feuille de route technologique et commerciale de la startup.</li>
-                <li><strong>Développement d'une architecture technique scalable :</strong> Conception et implémentation de solutions robustes et évolutives.</li>
+                <li><strong>Développement d&apos;une architecture technique scalable :</strong> Conception et implémentation de solutions robustes et évolutives.</li>
                 <li><strong>Positionnement stratégique sur des marchés concurrentiels :</strong> Identification des opportunités et élaboration de stratégies de différenciation.</li>
                 <li><strong>Mise en place de partenariats clés :</strong> Négociation et collaboration avec des acteurs majeurs pour accélérer la croissance.</li>
               </ul>
@@ -67,14 +68,14 @@ export default function Entrepreneurship() {
         <section className={styles.kaweplaSection}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>💍 Kawepla - Notre Solution Révolutionnaire</h2>
-            <Link href={entrepreneurialData.kawepla.url} target="_blank" rel="noopener noreferrer" className={styles.externalLink}>
+            <Link href="https://kawepla.kaporelo.com" target="_blank" rel="noopener noreferrer" className={styles.externalLink}>
               Visiter Kawepla →
             </Link>
           </div>
           
           <div className={styles.contentBlock}>
             <p className={styles.blockDescription}>
-              <strong className={styles.highlight}>Kawepla</strong> est la première réalisation majeure de Kaporelo : une plateforme web complète de gestion de mariage qui combine un système de gestion d'événements avec un marketplace de prestataires de services. Conçue pour rivaliser avec les leaders du marché, Kawepla est l'exemple parfait de la manière dont une expertise technique avancée et une vision business peuvent se transformer en une solution concrète et innovante.
+              <strong className={styles.highlight}>Kawepla</strong> est la première réalisation majeure de Kaporelo : une plateforme web complète de gestion de mariage qui combine un système de gestion d&apos;événements avec un marketplace de prestataires de services. Conçue pour rivaliser avec les leaders du marché, Kawepla est l&apos;exemple parfait de la manière dont une expertise technique avancée et une vision business peuvent se transformer en une solution concrète et innovante.
             </p>
 
             <div className={styles.innovationDetails}>
@@ -101,7 +102,7 @@ export default function Entrepreneurship() {
             <div className={styles.impactBlock}>
               <h3 className={styles.subTitle}>Impact et Vision :</h3>
               <ul className={styles.achievementsList}>
-                <li><strong>Simplification du Wedding Planning :</strong> Digitalisation complète du processus, gain de temps et d'argent pour les couples.</li>
+                <li><strong>Simplification du Wedding Planning :</strong> Digitalisation complète du processus, gain de temps et d&apos;argent pour les couples.</li>
                 <li><strong>Valeur Ajoutée pour les Prestataires :</strong> Visibilité accrue et outil de gestion intégré pour les professionnels du mariage.</li>
                 <li><strong>Positionnement Stratégique :</strong> Ambition de devenir un acteur majeur en proposant une expérience utilisateur inégalée.</li>
                 <li><strong>Démonstration de Résolution de Problèmes :</strong> Capacité à transformer des défis complexes en solutions innovantes et fonctionnelles.</li>

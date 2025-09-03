@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/app/blog/blog.module.css';
+import blogData from '@/data/blog.json';
 
 interface BlogPost {
   title: string;
@@ -11,9 +12,7 @@ interface BlogPost {
   hashtags: string[];
 }
 
-interface BlogData {
-  posts: BlogPost[];
-}
+
 
 export const metadata: Metadata = {
   title: 'Blog | Sabrina ELOUNDOU - Insights Tech & Entrepreneuriat',
@@ -22,8 +21,6 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  // Import direct des données pour éviter les erreurs côté serveur
-  const blogData = require('@/data/blog.json') as BlogData;
   return (
     <div className={styles.blogPage}>
       <div className={styles.container}>
@@ -61,4 +58,4 @@ export default function BlogPage() {
       </div>
     </div>
   );
-} 
+}

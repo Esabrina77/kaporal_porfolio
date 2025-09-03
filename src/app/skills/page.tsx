@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import TechIcon from '@/components/TechIcon';
 import styles from '@/styles/app/skills/skills.module.css';
+import profileData from '@/data/profile.json';
 
 export const metadata: Metadata = {
   title: 'Compétences | Sabrina ELOUNDOU - Expert DevOps, IoT & Full-Stack',
@@ -32,7 +33,7 @@ interface SkillsData {
 
 export default function SkillsPage() {
   // Import direct des données pour éviter les erreurs côté serveur
-  const profileData = require('@/data/profile.json');
+
   const skills = profileData.skills as SkillsData || { technical: [], soft: [] };
 
   return (

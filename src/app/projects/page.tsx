@@ -1,8 +1,29 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useProjects } from '@/hooks/useProjects';
 import styles from '@/styles/app/project/projects.module.css';
+import projectsData from '@/data/projects.json';
+
+// TypeScript interfaces
+interface Project {
+  title: string;
+  image?: string;
+  status?: string;
+  company?: string;
+  period: string;
+  role?: string;
+  technologies: string[];
+  description: string;
+  highlights?: string[];
+  technicalAchievements?: string[];
+  businessImpact?: string[];
+  businessValue?: string[];
+  points?: string[];
+  link?: string;
+  github?: string;
+}
+
+
 
 export const metadata: Metadata = {
   title: 'Projets | Sabrina ELOUNDOU - Architecte de Solutions Numériques',
@@ -11,8 +32,6 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  // Import direct des données pour éviter l'erreur côté serveur
-  const projectsData = require('@/data/projects.json');
   const projects = projectsData.projects || [];
 
   return (
@@ -21,7 +40,7 @@ export default function ProjectsPage() {
         <h1 className={styles.pageTitle}>Mes Projets</h1>
         
         <div className={styles.projectsGrid}>
-          {projects.map((project) => (
+          {projects.map((project: Project) => (
             <article key={project.title} className={styles.projectCard}>
               {project.image && (
                 <div className={styles.projectImage}>
@@ -56,7 +75,7 @@ export default function ProjectsPage() {
                 )}
                 
                 <div className={styles.technologies}>
-                  {project.technologies.map((tech) => (
+                  {project.technologies.map((tech: string) => (
                     <span key={tech} className={styles.tech}>{tech}</span>
                   ))}
                 </div>
@@ -68,7 +87,7 @@ export default function ProjectsPage() {
                   <div className={styles.projectSection}>
                     <h4 className={styles.sectionTitle}>Points Clés :</h4>
                     <ul className={styles.projectPoints}>
-                      {project.highlights.map((highlight, i) => (
+                      {project.highlights.map((highlight: string, i: number) => (
                         <li key={i}>{highlight}</li>
                       ))}
                     </ul>
@@ -80,7 +99,7 @@ export default function ProjectsPage() {
                   <div className={styles.projectSection}>
                     <h4 className={styles.sectionTitle}>Réalisations Techniques :</h4>
                     <ul className={styles.projectPoints}>
-                      {project.technicalAchievements.map((achievement, i) => (
+                      {project.technicalAchievements.map((achievement: string, i: number) => (
                         <li key={i}>{achievement}</li>
                       ))}
                     </ul>
@@ -92,7 +111,7 @@ export default function ProjectsPage() {
                   <div className={styles.projectSection}>
                     <h4 className={styles.sectionTitle}>Impact Business :</h4>
                     <ul className={styles.projectPoints}>
-                      {(project.businessImpact || project.businessValue || []).map((impact, i) => (
+                      {(project.businessImpact || project.businessValue || []).map((impact: string, i: number) => (
                         <li key={i}>{impact}</li>
                       ))}
                     </ul>
@@ -102,7 +121,7 @@ export default function ProjectsPage() {
                 {/* Legacy points support */}
                 {project.points && project.points.length > 0 && (
                   <ul className={styles.projectPoints}>
-                    {project.points.map((point, i) => (
+                    {project.points.map((point: string, i: number) => (
                       <li key={i}>{point}</li>
                     ))}
                   </ul>
