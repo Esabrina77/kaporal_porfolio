@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*montserrat*/
 
 :root {
   /* Colors */
@@ -16,7 +15,7 @@
   --white-alpha-80: hsla(0, 0%, 100%, 0.8);
   
   /* Typography */
-  --ff-poppins: var(--font-poppins);
+  --ff-montserrat: var(--font-montserrat);
 }
 
 [data-theme='light'] {
@@ -25,7 +24,7 @@
     hsl(87, 100%, 92%) 3%, 
     hsl(0, 0%, 100%) 97%
   );
-  --smoky-black:  hsla(176, 70%, 80%, 0.7)  ;
+  --smoky-black:  hsla(176, 93%, 23%, 0.733)  ;
   --white-alpha-10: hsla(0, 0%, 0%, 0.1);
   --white-alpha-25: hsla(0, 0%, 0%, 0.25);
   --white-alpha-40: hsla(0, 0%, 0%, 0.4);
@@ -50,7 +49,8 @@
 /* Base styles */
 @layer base {
   body {
-    @apply bg-[var(--smoky-black)] text-white font-[var(--ff-poppins)];
+    @apply bg-[var(--smoky-black)] text-white;
+    font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
   }
 }
 

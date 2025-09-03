@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Header from "@/components/Header";
 import "@/styles/globals.css";
 
-const poppins = Poppins({
+const montserrat = Montserrat({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-poppins',
 });
 
 export const metadata: Metadata = {
@@ -93,7 +92,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={poppins.variable}>
+      <body className={montserrat.className}>
         <Header />
         <main>
           {children}
