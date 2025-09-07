@@ -6,7 +6,7 @@ import { FaEnvelope, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 export default function ContactForm() {
   const contactInfo = {
     email: 'sabrinaeloundou33@gmail.com',
-    emailPro: 'kawepla-kaporelo@gmail.com', // Remplacez par votre numéro
+    emailPro: 'kawepla.kaporelo@gmail.com', //email de la startup
     instagram: 'https://instagram.com/sabrina_eloundou', // Remplacez par votre compte
     linkedin: 'https://www.linkedin.com/in/sabrina-eloundou-706372295/',
     github: 'https://github.com/Esabrina77'
@@ -35,7 +35,7 @@ export default function ContactForm() {
             className={styles.contactItem}
         >
           <FaEnvelope className={styles.contactIcon} />
-          <span className={styles.contactLabel}>Email Professionnel</span>
+          <span className={styles.contactLabel}>Email de la startup</span>
           <span className={styles.contactValue}>{contactInfo.emailPro}</span>
         </a>
 
