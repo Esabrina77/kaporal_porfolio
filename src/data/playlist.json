@@ -1,41 +1,39 @@
 {
   "tracks": [
     {
-      "src": "/audio/01 - The Weeknd - Timeless.mp3",
-      "title": "Timeless",
-      "artist": "The Weeknd"
-    },
-    
-    {
-      "src": "/audio/01. Dinos, Zed - STACKS.mp3",
-      "title": "STACKS",
-      "artist": "Dinos, Zed"
-    },
-    {
-      "src": "/audio/01. Didi B - BAZARHOFF II _ LE PADRÉ VÉLI.mp3",
+      "src": "/audio/Didi B - BAZARHOFF II _ LE PADRÉ VÉLI.mp3",
       "title": "BAZARHOFF II",
       "artist": "Didi B"
     },
     {
-      "src": "/audio/01 - A$AP Ferg - New Level (feat. Future).mp3",
-      "title": "New Level",
-      "artist": "A$AP Ferg feat. Future"
+      "src": "/audio/The Weeknd - Timeless.mp3",
+      "title": "Timeless",
+      "artist": "The Weeknd"
     },
-
     {
-      "src": "/audio/01. Tasha & Tracie - Amina.mp3",
+      "src": "/audio/Dinos, Zed - STACKS.mp3",
+      "title": "STACKS",
+      "artist": "Dinos, Zed"
+    },
+    {
+      "src": "/audio/Tasha & Tracie - Amina.mp3",
       "title": "Amina",
       "artist": "Tasha & Tracie"
     },
     {
-      "src": "/audio/09. Damso - Frère.mp3",
+      "src": "/audio/Damso - Frère.mp3",
       "title": "Frère",
       "artist": "Damso"
     },
     {
-      "src": "/audio/07 - Mariah Carey - My All.mp3",
+      "src": "/audio/Mariah Carey - My All.mp3",
       "title": "My All",
       "artist": "Mariah Carey"
+    },
+    {
+      "src": "/audio/ASAP Ferg - New Level (feat. Future).mp3",
+      "title": "New Level",
+      "artist": "A$AP Ferg feat. Future"
     }
   ]
 }
