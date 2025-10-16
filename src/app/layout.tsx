@@ -1,12 +1,29 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, JetBrains_Mono, Orbitron } from "next/font/google";
 import Header from "@/components/Header";
+import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
+import playlistData from "@/data/playlist.json";
 import "@/styles/globals.css";
 
 const montserrat = Montserrat({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-montserrat',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains-mono',
+});
+
+const orbitron = Orbitron({
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-orbitron',
 });
 
 export const metadata: Metadata = {
@@ -92,11 +109,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" data-theme="dark">
-      <body className={montserrat.className}>
+      <body className={`${montserrat.className} ${jetbrainsMono.variable} ${orbitron.variable}`}>
         <Header />
-        <main>
+        <main className="main-content">
           {children}
         </main>
+        <AudioPlayer tracks={playlistData.tracks} />
       </body>
     </html>
   );

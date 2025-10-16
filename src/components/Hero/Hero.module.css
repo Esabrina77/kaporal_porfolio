@@ -1,0 +1,192 @@
+.hero {
+  height: 100vh;
+  width: 100vw;
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px !important;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, var(--glow-subtle) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, var(--glow-accent) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, var(--glow-subtle) 0%, transparent 50%);
+  animation: backgroundPulse 8s ease-in-out infinite;
+}
+
+.mainContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  pointer-events: none; /* Permet aux interactions 3D de passer à travers */
+}
+
+.titleSection {
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  font-family: var(--font-orbitron), monospace;
+  letter-spacing: 0.05em;
+  text-shadow: var(--glow-subtle);
+  margin-bottom: 1rem;
+}
+
+.centralContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+
+.bottomSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.infoSection {
+  text-align: center;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-accent);
+  font-family: var(--font-orbitron), monospace;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  text-shadow: var(--glow-accent);
+}
+
+.title {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  font-family: var(--font-jetbrains-mono), monospace;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-family: var(--font-jetbrains-mono), monospace;
+}
+
+.navigation {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  pointer-events: auto; /* Permet l'interaction avec les liens */
+}
+
+.navLink {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: var(--font-jetbrains-mono), monospace;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-accent);
+  border-radius: 25px;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+}
+
+.navLink:hover {
+  color: var(--primary-accent);
+  border-color: var(--primary-accent);
+  background: var(--bg-overlay);
+  box-shadow: var(--glow-accent);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes backgroundPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    box-shadow: var(--glow-subtle);
+    text-shadow: var(--glow-subtle);
+  }
+  50% { 
+    box-shadow: var(--glow-accent);
+    text-shadow: var(--glow-accent);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+  
+  .mainContent {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .heading {
+    font-size: 2rem;
+  }
+  
+  .name {
+    font-size: 1.8rem;
+  }
+  
+  .title, .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .navigation {
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .navLink {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

@@ -1,8 +1,13 @@
 .header {
-  @apply fixed top-0 left-0 w-full z-50
-         bg-[var(--bg-gradient-onyx)]
-         border-b border-solid border-[var(--white-alpha-25)]
-         backdrop-blur-[10px];
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  border-bottom: 1px solid var(--border-subtle);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: var(--bg-card);
   height: 120px;
 }
 
@@ -35,33 +40,37 @@
 }
 
 .navLink {
-  @apply px-6 py-3 rounded-full
-         text-lg font-medium
-         transition-colors duration-300
-         hover:text-[var(--orange-yellow-crayola)]
+  @apply px-4 py-2
+         text-sm font-medium
+         transition-all duration-300
          relative;
-  color: var(--white-alpha-80);
+  color: var(--text-secondary);
+  font-family: var(--font-jetbrains-mono), monospace;
+  letter-spacing: 0.05em;
 }
 
 .navLink::after {
   content: '';
-  @apply absolute bottom-0 left-1/2 
-         w-0 h-0.5
-         bg-[var(--orange-yellow-crayola)]
-         transition-all duration-300 ease-in-out
-         transform -translate-x-1/2;
+  @apply absolute bottom-0 left-0 
+         w-0 h-px
+         transition-all duration-300 ease-in-out;
+  background: var(--primary-accent);
+}
+
+.navLink:hover {
+  color: var(--primary-accent);
 }
 
 .navLink:hover::after {
-  @apply w-1/2;
+  @apply w-full;
 }
 
 .active {
-  @apply text-[var(--orange-yellow-crayola)];
+  color: var(--primary-accent);
 }
 
 .active::after {
-  @apply w-3/4;
+  @apply w-full;
 }
 
 .headerRight {
@@ -70,10 +79,19 @@
 
 .themeToggle {
   @apply p-2 rounded-full
-         transition-transform duration-300
+         transition-all duration-300
          hover:scale-110
-         focus:outline-none
-         focus:ring-2 focus:ring-[var(--orange-yellow-crayola)];
+         focus:outline-none;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+}
+
+.themeToggle:hover {
+  border-color: var(--border-visible);
+}
+
+.themeToggle:focus {
+  border-color: var(--border-accent);
 }
 
 .themeIcon {
@@ -95,8 +113,8 @@
   @apply w-full h-[3px]
          rounded-sm
          transition-all duration-300;
-  background-color: var(--white-alpha-80);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: var(--text-primary);
+  box-shadow: 0 0 2px var(--bg-primary);
 }
 
 /* Animation des barres du burger quand le menu est ouvert */
@@ -118,11 +136,12 @@
          w-full h-0
          overflow-hidden
          transition-all duration-300;
-  background-color: var(--smoky-black);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--bg-primary);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 99;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--glow-accent);
+  border: 1px solid var(--border-subtle);
 }
 
 .mobileMenu.open {
@@ -143,16 +162,25 @@
 .mobileNavLink {
   @apply block py-4 px-6
          text-2xl font-medium
-         transition-colors duration-300
-         hover:text-[var(--orange-yellow-crayola)]
+         transition-all duration-300
          border-l-4 border-transparent;
-  color: var(--white-alpha-80);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  color: var(--text-secondary);
+  font-family: var(--font-jetbrains-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mobileNavLink:hover {
+  color: var(--primary-accent);
+  text-shadow: var(--glow-subtle);
+  border-color: var(--primary-accent);
 }
 
 .mobileNavLink.active {
-  @apply text-[var(--orange-yellow-crayola)]
-         border-l-4 border-[var(--orange-yellow-crayola)];
+  color: var(--primary-accent);
+  text-shadow: var(--glow-accent);
+  border-color: var(--primary-accent);
+  @apply border-l-4;
 }
 
 /* Responsive design */
@@ -185,15 +213,15 @@
 }
 @media (max-width: 768px) {
   .header {
-    height: 80px;
+    height: 80px !important;
   }
 
   .headerContent {
-    height: 80px;
+    height: 100% !important;
   }
 
   .logoContainer {
-    height: 60px;
+    height: 87% !important;
   }
 
   .headerRight {

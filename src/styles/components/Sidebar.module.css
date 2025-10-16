@@ -1,13 +1,13 @@
 .sidebar {
-  @apply bg-[var(--bg-gradient-onyx)]
-         border border-solid border-[var(--white-alpha-25)]
-         rounded-[20px]
+  @apply rounded-[20px]
          p-6 sm:p-8
          fixed
          top-32
          left-[max(1rem,calc((100vw-80rem)/2+1rem))]
          w-[400px];
-  backdrop-filter: blur(10px);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(20px);
 }
 
 .sidebarInfo {
@@ -18,8 +18,9 @@
   @apply relative
          w-[300px] h-[300px]
          rounded-full
-         border-4 border-solid border-[var(--orange-yellow-crayola)]
+         border-4 border-solid
          overflow-hidden;
+  border-color: var(--border-visible);
 }
 
 .avatarBox img {
@@ -32,19 +33,22 @@
 
 .name {
   @apply text-4xl font-bold mb-4;
-  background: linear-gradient(to right, var(--orange-yellow-crayola), white);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--primary-accent);
+  font-family: var(--font-orbitron), monospace;
+  letter-spacing: 0.05em;
 }
 
 .title {
   @apply text-2xl mb-2;
-  color: var(--white-alpha-40);
+  color: var(--text-secondary);
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 1.1rem;
 }
 
 .subtitle {
   @apply text-lg font-medium;
-  color: var(--orange-yellow-crayola);
+  color: var(--primary-accent);
+  font-family: var(--font-jetbrains-mono), monospace;
 }
 
 .infoMoreBtn {
@@ -102,8 +106,12 @@
 .contactLink {
   @apply text-sm
          overflow-hidden text-ellipsis whitespace-nowrap
-         transition-colors duration-300
-         hover:text-[var(--orange-yellow-crayola)];
+         transition-all duration-300;
+  color: var(--text-secondary);
+}
+
+.contactLink:hover {
+  color: var(--primary-accent);
 }
 
 .sidebarInfoMore {

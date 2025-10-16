@@ -52,7 +52,7 @@ export default function Header() {
     { href: '/experience', label: 'Expérience' },
     
     { href: '/contact', label: 'Contact' },
-    { href: '/ugc', label: 'UGC' },
+    // { href: '/ugc', label: 'UGC' },
   ];
 
   return (

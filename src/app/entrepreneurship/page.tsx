@@ -16,12 +16,12 @@ export default function Entrepreneurship() {
   return (
     <div className={`${styles.entrepreneurshipPage} ${styles.pageContainer}`}>
       <div className={styles.container}>
-        <h1 className={styles.pageTitle}>Mon Aventure Entrepreneuriale</h1>
+        <h1 className={styles.pageTitle}>Premier pas... 😃</h1>
 
         {/* Section Kaporelo */}
         <section className={styles.kaporeloSection}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>🏢 Kaporelo - Ma Startup Tech</h2>
+            <h2 className={styles.sectionTitle}>🏢 Kaporelo - Ma vision Tech</h2>
             <Link href="https://kaporelo.com" target="_blank" rel="noopener noreferrer" className={styles.externalLink}>
               Visiter Kaporelo →
             </Link>

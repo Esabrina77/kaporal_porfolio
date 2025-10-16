@@ -4,7 +4,7 @@
 }
 
 .pageContainer {
-  @apply pt-32 pb-16 sm:pb-24; /* Adjusted for fixed header */
+  @apply pt-5 pb-16 sm:pb-24; /* Adjusted for fixed header */
 }
 
 .container {
@@ -42,7 +42,7 @@
   @apply text-3xl sm:text-4xl font-bold;
   background: linear-gradient(to right, var(--orange-yellow-crayola), white);
   -webkit-background-clip: text;
-  color: transparent;
+  
 }
 
 .externalLink {

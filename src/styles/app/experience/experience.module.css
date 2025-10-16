@@ -3,7 +3,7 @@
 }
 
 .pageContainer {
-  @apply pt-32 pb-16 sm:pb-24;
+  @apply pt-5 pb-16 sm:pb-24;
 }
 
 
