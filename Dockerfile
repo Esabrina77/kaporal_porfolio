@@ -1,22 +1,41 @@
-FROM node:18-alpine AS builder
+# Phase 1 : Construction (Builder)
+FROM node:20-slim AS builder
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
+
+# Copie des fichiers de package
+COPY package.json package-lock.json ./
+
+# Configuration de tolérance aux coupures réseau (Timeouts & Retries)
+RUN npm config set fetch-retry-maxtimeout 1200000 && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retries 10
+
+# Installer toutes les dépendances
+RUN npm install --no-audit --no-fund
+
+# Copie du code (excluant .env.local grâce au .dockerignore)
 COPY . .
+
+# Construction du projet Next.js avec standalone output activé dans next.config.js
 RUN npm run build
 
-FROM node:18-alpine AS runner
+
+# Phase 2 : Exécution (Runner)
+FROM node:20-slim AS runner
 WORKDIR /app
-ENV NODE_ENV production
 
-# On copie les fichiers nécessaires au mode standard
+ENV NODE_ENV=production
+# Force Next.js à écouter sur le bon port en standalone
+ENV PORT=3004
+
+# Récupérer les assets statiques indispensables
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
 
+# Récupérer le serveur autonome généré (contient uniquement node_modules strict nécessaire)
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+
+# Next.js démarre sur le port spécifié
 EXPOSE 3004
-# On s'assure que Next utilise le port 3004
-ENV PORT 3004
 
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
