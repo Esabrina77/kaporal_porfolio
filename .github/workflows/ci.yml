@@ -48,3 +48,15 @@ jobs:
           tags: kaporal-portfolio:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  deploy:
+    name: Deploy to Server
+    needs: docker
+    if: github.ref == 'refs/heads/main'
+    runs-on: self-hosted
+    steps:
+      - name: Update code and restart Docker
+        run: |
+          cd /home/sabrina/app/portfolio
+          git pull
+          sudo docker compose up -d --build
