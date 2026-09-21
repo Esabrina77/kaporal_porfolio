@@ -1,13 +1,12 @@
 "use client";
 
 import styles from '@/styles/components/Contact.module.css';
-import { FaEnvelope, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function ContactForm() {
   const contactInfo = {
     email: 'sabrinaeloundou33@gmail.com',
     emailPro: 'kawepla.kaporelo@gmail.com', //email de la startup
-    instagram: 'https://instagram.com/sabrina_eloundou', // Remplacez par votre compte
     linkedin: 'https://www.linkedin.com/in/sabrina-eloundou-706372295/',
     github: 'https://github.com/Esabrina77'
   };
@@ -37,17 +36,6 @@ export default function ContactForm() {
           <FaEnvelope className={styles.contactIcon} />
           <span className={styles.contactLabel}>Email de la startup</span>
           <span className={styles.contactValue}>{contactInfo.emailPro}</span>
-        </a>
-
-        <a 
-          href={contactInfo.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.contactItem}
-        >
-          <FaInstagram className={styles.contactIcon} />
-          <span className={styles.contactLabel}>Instagram</span>
-          <span className={styles.contactValue}>@sabrina_eloundou</span>
         </a>
 
         <a 
